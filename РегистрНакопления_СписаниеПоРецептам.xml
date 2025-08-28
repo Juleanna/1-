@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:mdclass="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AccumulationRegister uuid="a5b6c7d8-901e-34fa-6789-012345678901">
+		<InternalInfo>
+			<xsi:type>AccumulationRegisterInfo</xsi:type>
+		</InternalInfo>
+		<Properties>
+			<Name>СписаниеПоРецептам</Name>
+			<Synonym>
+				<key>ru</key>
+				<value>Списание ингредиентов по рецептам</value>
+			</Synonym>
+			<Comment>Регистр для аналитики списания ингредиентов при приготовлении блюд</Comment>
+			<UseStandardCommands>true</UseStandardCommands>
+			<RegisterType>Turnovers</RegisterType>
+			<StandardAttributes>
+				<Name>Period</Name>
+				<FillValue xsi:type="DateTime">0001-01-01T00:00:00</FillValue>
+				<FillChecking>ShowError</FillChecking>
+				<FullTextSearch>Use</FullTextSearch>
+				<DataHistory>Use</DataHistory>
+			</StandardAttributes>
+			<StandardAttributes>
+				<Name>Recorder</Name>
+				<FillValue xsi:type="DocumentRef"/>
+				<FullTextSearch>Use</FullTextSearch>
+				<DataHistory>Use</DataHistory>
+			</StandardAttributes>
+			<StandardAttributes>
+				<Name>LineNumber</Name>
+				<FillValue xsi:type="Number">0</FillValue>
+				<FullTextSearch>Use</FullTextSearch>
+				<DataHistory>Use</DataHistory>
+			</StandardAttributes>
+			<StandardAttributes>
+				<Name>Active</Name>
+				<FillValue xsi:type="Boolean">true</FillValue>
+				<FullTextSearch>Use</FullTextSearch>
+				<DataHistory>Use</DataHistory>
+			</StandardAttributes>
+		</Properties>
+		<ChildObjects>
+			<Dimension uuid="b6c7d8e9-012f-45ab-789a-123456789012">
+				<Properties>
+					<Name>Рецепт</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Рецепт</value>
+					</Synonym>
+					<Comment>Ссылка на кулинарный рецепт</Comment>
+					<Type>
+						<TypeSet>
+							<Type>CatalogRef.КулинарныеРецепты</Type>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Кулинарный рецепт по которому произведено списание</value>
+					</Tooltip>
+					<FillValue xsi:type="CatalogRef.КулинарныеРецепты"/>
+					<FillFromFillingValue>true</FillFromFillingValue>
+					<FillChecking>ShowError</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="c7d8e9f0-123a-56bc-89ab-234567890123">
+				<Properties>
+					<Name>ГотовоеБлюдо</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Готовое блюдо</value>
+					</Synonym>
+					<Comment>Номенклатура готового блюда</Comment>
+					<Type>
+						<TypeSet>
+							<Type>CatalogRef.Номенклатура</Type>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Готовое блюдо которое было реализовано</value>
+					</Tooltip>
+					<FillValue xsi:type="CatalogRef.Номенклатура"/>
+					<FillFromFillingValue>true</FillFromFillingValue>
+					<FillChecking>ShowError</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="d8e9f0a1-234b-67cd-9abc-345678901234">
+				<Properties>
+					<Name>Ингредиент</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Ингредиент</value>
+					</Synonym>
+					<Comment>Номенклатура ингредиента</Comment>
+					<Type>
+						<TypeSet>
+							<Type>CatalogRef.Номенклатура</Type>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Ингредиент который был списан</value>
+					</Tooltip>
+					<FillValue xsi:type="CatalogRef.Номенклатура"/>
+					<FillFromFillingValue>true</FillFromFillingValue>
+					<FillChecking>ShowError</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="e9f0a1b2-345c-78de-abcd-456789012345">
+				<Properties>
+					<Name>Склад</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Склад</value>
+					</Synonym>
+					<Comment>Склад с которого произведено списание</Comment>
+					<Type>
+						<TypeSet>
+							<Type>CatalogRef.Склады</Type>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Склад с которого списаны ингредиенты</value>
+					</Tooltip>
+					<FillValue xsi:type="CatalogRef.Склады"/>
+					<FillFromFillingValue>true</FillFromFillingValue>
+					<FillChecking>ShowError</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+		<Resources>
+			<Resource uuid="f0a1b2c3-456d-89ef-bcde-567890123456">
+				<Properties>
+					<Name>КоличествоПорций</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Количество порций</value>
+					</Synonym>
+					<Comment>Количество приготовленных порций блюда</Comment>
+					<Type>
+						<TypeSet>
+							<Type>Number</Type>
+							<NumberQualifiers>
+								<Digits>15</Digits>
+								<FractionDigits>3</FractionDigits>
+								<AllowedSign>Any</AllowedSign>
+							</NumberQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Количество порций блюда</value>
+					</Tooltip>
+					<FillValue xsi:type="Number">0</FillValue>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Resource>
+			<Resource uuid="a1b2c3d4-567e-90fa-cdef-678901234567">
+				<Properties>
+					<Name>КоличествоИнгредиента</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Количество ингредиента</value>
+					</Synonym>
+					<Comment>Количество списанного ингредиента</Comment>
+					<Type>
+						<TypeSet>
+							<Type>Number</Type>
+							<NumberQualifiers>
+								<Digits>15</Digits>
+								<FractionDigits>3</FractionDigits>
+								<AllowedSign>Any</AllowedSign>
+							</NumberQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Количество списанного ингредиента</value>
+					</Tooltip>
+					<FillValue xsi:type="Number">0</FillValue>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Resource>
+			<Resource uuid="b2c3d4e5-678f-01ab-defa-789012345678">
+				<Properties>
+					<Name>СтоимостьИнгредиента</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Стоимость ингредиента</value>
+					</Synonym>
+					<Comment>Стоимость списанного ингредиента</Comment>
+					<Type>
+						<TypeSet>
+							<Type>Number</Type>
+							<NumberQualifiers>
+								<Digits>15</Digits>
+								<FractionDigits>2</FractionDigits>
+								<AllowedSign>Any</AllowedSign>
+							</NumberQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Стоимость списанного ингредиента</value>
+					</Tooltip>
+					<FillValue xsi:type="Number">0</FillValue>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Resource>
+		</Resources>
+	</AccumulationRegister>
+</MetaDataObject>

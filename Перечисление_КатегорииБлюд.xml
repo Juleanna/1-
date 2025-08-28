@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:mdclass="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Enum uuid="c5d6e7f8-901a-23cd-ef45-678901234567">
+		<InternalInfo>
+			<xsi:type>EnumInfo</xsi:type>
+		</InternalInfo>
+		<Properties>
+			<Name>КатегорииБлюд</Name>
+			<Synonym>
+				<key>ru</key>
+				<value>Категории блюд</value>
+			</Synonym>
+			<Comment>Перечисление для категоризации кулинарных изделий</Comment>
+			<UseStandardCommands>true</UseStandardCommands>
+			<Representation>List</Representation>
+			<QuickChoice>true</QuickChoice>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="d6e7f8a9-012b-34de-f567-789012345678">
+				<Properties>
+					<Name>Супы</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Супы</value>
+					</Synonym>
+					<Comment>Жидкие блюда - супы, борщи, солянки</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e7f8a9b0-123c-45ef-6789-890123456789">
+				<Properties>
+					<Name>ВторыеБлюда</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Вторые блюда</value>
+					</Synonym>
+					<Comment>Основные горячие блюда</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="f8a9b0c1-234d-56fa-789a-901234567890">
+				<Properties>
+					<Name>Гарниры</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Гарниры</value>
+					</Synonym>
+					<Comment>Крупы, овощи, макаронные изделия как гарниры</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a9b0c1d2-345e-67ab-89bc-012345678901">
+				<Properties>
+					<Name>Салаты</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Салаты</value>
+					</Synonym>
+					<Comment>Холодные салаты и закуски</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b0c1d2e3-456f-78bc-9acd-123456789012">
+				<Properties>
+					<Name>Десерты</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Десерты</value>
+					</Synonym>
+					<Comment>Сладкие блюда и десерты</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c1d2e3f4-567a-89cd-abde-234567890123">
+				<Properties>
+					<Name>Напитки</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Напитки</value>
+					</Synonym>
+					<Comment>Горячие и холодные напитки</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d2e3f4a5-678b-90de-bcef-345678901234">
+				<Properties>
+					<Name>Выпечка</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Выпечка</value>
+					</Synonym>
+					<Comment>Хлебобулочные и мучные кондитерские изделия</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e3f4a5b6-789c-01ef-cdf0-456789012345">
+				<Properties>
+					<Name>Горячие закуски</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Горячие закуски</value>
+					</Synonym>
+					<Comment>Горячие закусочные блюда</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="f4a5b6c7-890d-12fa-dea1-567890123456">
+				<Properties>
+					<Name>Холодные закуски</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Холодные закуски</value>
+					</Synonym>
+					<Comment>Холодные закусочные блюда</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>
