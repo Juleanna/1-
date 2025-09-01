@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:mdclass="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Catalog uuid="f1e2d3c4-5678-90ab-cdef-987654321012">
+		<InternalInfo>
+			<xsi:type>CatalogInfo</xsi:type>
+		</InternalInfo>
+		<Properties>
+			<Name>Техкарточки</Name>
+			<Synonym>
+				<key>ru</key>
+				<value>Технологические карты</value>
+			</Synonym>
+			<Comment>Справочник технологических карт блюд с детальным описанием процесса приготовления</Comment>
+			<UseStandardCommands>true</UseStandardCommands>
+			<InputByString>
+				<xsi:type>CatalogInputByString</xsi:type>
+				<value>Description</value>
+			</InputByString>
+			<Representation>List</Representation>
+			<LengthOfCode>9</LengthOfCode>
+			<LengthOfDescription>150</LengthOfDescription>
+			<CodeType>String</CodeType>
+			<CodeAllowedLength>Variable</CodeAllowedLength>
+			<CodeSeries>WholeCatalog</CodeSeries>
+			<CheckUnique>true</CheckUnique>
+			<Autonumbering>true</Autonumbering>
+			<DefaultPresentation>AsDescription</DefaultPresentation>
+			<EditType>InDialog</EditType>
+			<QuickChoice>true</QuickChoice>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="a2b3c4d5-1234-56ab-789c-123456789012">
+				<Properties>
+					<Name>НомерТехкарточки</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Номер техкарточки</value>
+					</Synonym>
+					<Comment>Официальный номер технологической карты</Comment>
+					<Type>
+						<TypeSet>
+							<Type>String</Type>
+							<StringQualifiers>
+								<Length>20</Length>
+								<AllowedLength>Variable</AllowedLength>
+							</StringQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Укажите номер технологической карты</value>
+					</Tooltip>
+					<FillValue xsi:type="String"/>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="b3c4d5e6-2345-67bc-890d-234567890123">
+				<Properties>
+					<Name>ГотовоеБлюдо</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Готовое блюдо</value>
+					</Synonym>
+					<Comment>Ссылка на номенклатуру готового блюда</Comment>
+					<Type>
+						<TypeSet>
+							<Type>CatalogRef.Номенклатура</Type>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Выберите готовое блюдо из справочника номенклатуры</value>
+					</Tooltip>
+					<FillValue xsi:type="CatalogRef.Номенклатура"/>
+					<FillChecking>ShowError</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="c4d5e6f7-3456-78cd-901e-345678901234">
+				<Properties>
+					<Name>КатегорияБлюда</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Категория блюда</value>
+					</Synonym>
+					<Comment>Категория кулинарного изделия</Comment>
+					<Type>
+						<TypeSet>
+							<Type>EnumRef.КатегорииБлюд</Type>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Укажите категорию блюда</value>
+					</Tooltip>
+					<FillValue xsi:type="EnumRef.КатегорииБлюд"/>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="d5e6f7a8-4567-89de-012f-456789012345">
+				<Properties>
+					<Name>ВыходПорции</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Выход порции (г)</value>
+					</Synonym>
+					<Comment>Выход готовой порции в граммах</Comment>
+					<Type>
+						<TypeSet>
+							<Type>Number</Type>
+							<NumberQualifiers>
+								<Digits>10</Digits>
+								<FractionDigits>1</FractionDigits>
+								<AllowedSign>Nonnegative</AllowedSign>
+							</NumberQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Выход готовой порции в граммах</value>
+					</Tooltip>
+					<FillValue xsi:type="Number">0</FillValue>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="e6f7a8b9-5678-90ef-123a-567890123456">
+				<Properties>
+					<Name>КалорийностьПорции</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Калорийность порции (ккал)</value>
+					</Synonym>
+					<Comment>Энергетическая ценность порции в ккал</Comment>
+					<Type>
+						<TypeSet>
+							<Type>Number</Type>
+							<NumberQualifiers>
+								<Digits>10</Digits>
+								<FractionDigits>1</FractionDigits>
+								<AllowedSign>Nonnegative</AllowedSign>
+							</NumberQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Энергетическая ценность порции в ккал</value>
+					</Tooltip>
+					<FillValue xsi:type="Number">0</FillValue>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="f7a8b9c0-6789-01fa-234b-678901234567">
+				<Properties>
+					<Name>Белки</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Белки (г)</value>
+					</Synonym>
+					<Comment>Содержание белков в порции</Comment>
+					<Type>
+						<TypeSet>
+							<Type>Number</Type>
+							<NumberQualifiers>
+								<Digits>8</Digits>
+								<FractionDigits>2</FractionDigits>
+								<AllowedSign>Nonnegative</AllowedSign>
+							</NumberQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Содержание белков в граммах</value>
+					</Tooltip>
+					<FillValue xsi:type="Number">0</FillValue>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="a8b9c0d1-7890-12ab-345c-789012345678">
+				<Properties>
+					<Name>Жиры</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Жиры (г)</value>
+					</Synonym>
+					<Comment>Содержание жиров в порции</Comment>
+					<Type>
+						<TypeSet>
+							<Type>Number</Type>
+							<NumberQualifiers>
+								<Digits>8</Digits>
+								<FractionDigits>2</FractionDigits>
+								<AllowedSign>Nonnegative</AllowedSign>
+							</NumberQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Содержание жиров в граммах</value>
+					</Tooltip>
+					<FillValue xsi:type="Number">0</FillValue>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="b9c0d1e2-8901-23bc-456d-890123456789">
+				<Properties>
+					<Name>Углеводы</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Углеводы (г)</value>
+					</Synonym>
+					<Comment>Содержание углеводов в порции</Comment>
+					<Type>
+						<TypeSet>
+							<Type>Number</Type>
+							<NumberQualifiers>
+								<Digits>8</Digits>
+								<FractionDigits>2</FractionDigits>
+								<AllowedSign>Nonnegative</AllowedSign>
+							</NumberQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Содержание углеводов в граммах</value>
+					</Tooltip>
+					<FillValue xsi:type="Number">0</FillValue>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="c0d1e2f3-9012-34cd-567e-901234567890">
+				<Properties>
+					<Name>ВремяПриготовления</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Время приготовления (мин)</value>
+					</Synonym>
+					<Comment>Время приготовления блюда в минутах</Comment>
+					<Type>
+						<TypeSet>
+							<Type>Number</Type>
+							<NumberQualifiers>
+								<Digits>4</Digits>
+								<FractionDigits>0</FractionDigits>
+								<AllowedSign>Nonnegative</AllowedSign>
+							</NumberQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Время приготовления в минутах</value>
+					</Tooltip>
+					<FillValue xsi:type="Number">0</FillValue>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="d1e2f3a4-0123-45de-678f-012345678901">
+				<Properties>
+					<Name>ТехнологияПриготовления</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Технология приготовления</value>
+					</Synonym>
+					<Comment>Подробное описание технологического процесса</Comment>
+					<Type>
+						<TypeSet>
+							<Type>String</Type>
+							<StringQualifiers>
+								<Length>0</Length>
+								<AllowedLength>Variable</AllowedLength>
+							</StringQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Подробное описание технологического процесса приготовления</value>
+					</Tooltip>
+					<FillValue xsi:type="String"/>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+					<MultiLine>true</MultiLine>
+					<ExtendedEdit>true</ExtendedEdit>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="e2f3a4b5-1234-56ef-789a-123456789012">
+				<Properties>
+					<Name>ТребованияКСырью</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Требования к качеству сырья</value>
+					</Synonym>
+					<Comment>Требования к качеству используемого сырья и продуктов</Comment>
+					<Type>
+						<TypeSet>
+							<Type>String</Type>
+							<StringQualifiers>
+								<Length>0</Length>
+								<AllowedLength>Variable</AllowedLength>
+							</StringQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Требования к качеству используемого сырья</value>
+					</Tooltip>
+					<FillValue xsi:type="String"/>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+					<MultiLine>true</MultiLine>
+					<ExtendedEdit>true</ExtendedEdit>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="f3a4b5c6-2345-67fa-890b-234567890123">
+				<Properties>
+					<Name>ПоказателиГотовогоБлюда</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Показатели готового блюда</value>
+					</Synonym>
+					<Comment>Органолептические показатели готового блюда</Comment>
+					<Type>
+						<TypeSet>
+							<Type>String</Type>
+							<StringQualifiers>
+								<Length>0</Length>
+								<AllowedLength>Variable</AllowedLength>
+							</StringQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Описание внешнего вида, вкуса, запаха готового блюда</value>
+					</Tooltip>
+					<FillValue xsi:type="String"/>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+					<MultiLine>true</MultiLine>
+					<ExtendedEdit>true</ExtendedEdit>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="a4b5c6d7-3456-78ab-901c-345678901234">
+				<Properties>
+					<Name>СебестоимостьПорции</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Себестоимость порции</value>
+					</Synonym>
+					<Comment>Расчетная себестоимость одной порции</Comment>
+					<Type>
+						<TypeSet>
+							<Type>Number</Type>
+							<NumberQualifiers>
+								<Digits>15</Digits>
+								<FractionDigits>2</FractionDigits>
+								<AllowedSign>Nonnegative</AllowedSign>
+							</NumberQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Себестоимость одной порции (рассчитывается автоматически)</value>
+					</Tooltip>
+					<FillValue xsi:type="Number">0</FillValue>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+		</ChildObjects>
+		<TabularSections>
+			<TabularSection uuid="b5c6d7e8-4567-89bc-012d-456789012345">
+				<Properties>
+					<Name>СоставИнгредиентов</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Состав ингредиентов</value>
+					</Synonym>
+					<Comment>Нормы вложения сырья и продуктов</Comment>
+					<Tooltip>
+						<key>ru</key>
+						<value>Укажите все ингредиенты с нормами вложения</value>
+					</Tooltip>
+					<StandardAttributes>
+						<Name>LineNumber</Name>
+						<FillValue xsi:type="Number">0</FillValue>
+						<FullTextSearch>Use</FullTextSearch>
+						<Mask>
+							<key>ru</key>
+							<value/>
+						</Mask>
+						<DataHistory>Use</DataHistory>
+					</StandardAttributes>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="c6d7e8f9-5678-90cd-123e-567890123456">
+						<Properties>
+							<Name>Ингредиент</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>Наименование сырья</value>
+							</Synonym>
+							<Comment>Наименование сырья и продуктов</Comment>
+							<Type>
+								<TypeSet>
+									<Type>CatalogRef.Номенклатура</Type>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Выберите ингредиент из справочника номенклатуры</value>
+							</Tooltip>
+							<FillValue xsi:type="CatalogRef.Номенклатура"/>
+							<FillChecking>ShowError</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="d7e8f9a0-6789-01de-234f-678901234567">
+						<Properties>
+							<Name>НормаБрутто</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>Норма брутто (г)</value>
+							</Synonym>
+							<Comment>Норма закладки сырья в граммах брутто</Comment>
+							<Type>
+								<TypeSet>
+									<Type>Number</Type>
+									<NumberQualifiers>
+										<Digits>10</Digits>
+										<FractionDigits>2</FractionDigits>
+										<AllowedSign>Nonnegative</AllowedSign>
+									</NumberQualifiers>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Норма закладки сырья в граммах брутто</value>
+							</Tooltip>
+							<FillValue xsi:type="Number">0</FillValue>
+							<FillChecking>ShowError</FillChecking>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="e8f9a0b1-7890-12ef-345a-789012345678">
+						<Properties>
+							<Name>НормаНетто</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>Норма нетто (г)</value>
+							</Synonym>
+							<Comment>Норма закладки сырья в граммах нетто</Comment>
+							<Type>
+								<TypeSet>
+									<Type>Number</Type>
+									<NumberQualifiers>
+										<Digits>10</Digits>
+										<FractionDigits>2</FractionDigits>
+										<AllowedSign>Nonnegative</AllowedSign>
+									</NumberQualifiers>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Норма закладки сырья в граммах нетто</value>
+							</Tooltip>
+							<FillValue xsi:type="Number">0</FillValue>
+							<FillChecking>ShowError</FillChecking>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="f9a0b1c2-8901-23fa-456b-890123456789">
+						<Properties>
+							<Name>ПроцентОтходов</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>% отходов</value>
+							</Synonym>
+							<Comment>Процент отходов при обработке</Comment>
+							<Type>
+								<TypeSet>
+									<Type>Number</Type>
+									<NumberQualifiers>
+										<Digits>5</Digits>
+										<FractionDigits>2</FractionDigits>
+										<AllowedSign>Nonnegative</AllowedSign>
+									</NumberQualifiers>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Процент отходов при механической обработке</value>
+							</Tooltip>
+							<FillValue xsi:type="Number">0</FillValue>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="a0b1c2d3-9012-34ab-567c-901234567890">
+						<Properties>
+							<Name>СтоимостьЕдиницы</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>Цена за кг</value>
+							</Synonym>
+							<Comment>Стоимость единицы ингредиента</Comment>
+							<Type>
+								<TypeSet>
+									<Type>Number</Type>
+									<NumberQualifiers>
+										<Digits>15</Digits>
+										<FractionDigits>2</FractionDigits>
+										<AllowedSign>Nonnegative</AllowedSign>
+									</NumberQualifiers>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Стоимость единицы ингредиента</value>
+							</Tooltip>
+							<FillValue xsi:type="Number">0</FillValue>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="b1c2d3e4-0123-45bc-678d-012345678901">
+						<Properties>
+							<Name>СуммаСтоимости</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>Сумма</value>
+							</Synonym>
+							<Comment>Стоимость ингредиента в рецепте</Comment>
+							<Type>
+								<TypeSet>
+									<Type>Number</Type>
+									<NumberQualifiers>
+										<Digits>15</Digits>
+										<FractionDigits>2</FractionDigits>
+										<AllowedSign>Nonnegative</AllowedSign>
+									</NumberQualifiers>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Общая стоимость ингредиента в рецепте</value>
+							</Tooltip>
+							<FillValue xsi:type="Number">0</FillValue>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="c2d3e4f5-1234-56cd-789e-123456789012">
+						<Properties>
+							<Name>Комментарий</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>Способ обработки</value>
+							</Synonym>
+							<Comment>Способ обработки и использования сырья</Comment>
+							<Type>
+								<TypeSet>
+									<Type>String</Type>
+									<StringQualifiers>
+										<Length>200</Length>
+										<AllowedLength>Variable</AllowedLength>
+									</StringQualifiers>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Способ обработки и использования сырья</value>
+							</Tooltip>
+							<FillValue xsi:type="String"/>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+		</TabularSections>
+	</Catalog>
+</MetaDataObject>

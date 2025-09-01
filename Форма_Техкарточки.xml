@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.1/data/ui" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+	<Properties>
+		<Name>ФормаЭлемента</Name>
+		<Synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Форма элемента</v8:content>
+			</v8:item>
+		</Synonym>
+		<Comment>Форма элемента справочника Техкарточки</Comment>
+		<FormType>Ordinary</FormType>
+		<VerticalStretch>true</VerticalStretch>
+		<AutoTitle>false</AutoTitle>
+		<Title>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Технологическая карта</v8:content>
+			</v8:item>
+		</Title>
+	</Properties>
+	<Parameters>
+		<Parameter>
+			<Name>Объект</Name>
+			<ValueType>
+				<Type>CatalogObject.Техкарточки</Type>
+			</ValueType>
+		</Parameter>
+	</Parameters>
+	<Commands>
+		<Command name="ПересчитатьСебестоимость" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать себестоимость</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать себестоимость порции по текущим ценам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПересчитатьСебестоимость</Action>
+		</Command>
+		<Command name="РассчитатьПищевуюЦенность" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать пищевую ценность</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматически рассчитать БЖУ и калорийность</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РассчитатьПищевуюЦенность</Action>
+		</Command>
+		<Command name="СоставИнгредиентовДобавить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить ингредиент в техкарточку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоставИнгредиентовДобавить</Action>
+		</Command>
+		<Command name="СоставИнгредиентовУдалить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выбранный ингредиент</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоставИнгредиентовУдалить</Action>
+		</Command>
+	</Commands>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<Type>CatalogObject.Техкарточки</Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Items>
+		<Pages name="Страницы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ChildItems>
+				<Page name="СтраницаОсновные" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основные</v8:content>
+						</v8:item>
+					</Title>
+					<ChildItems>
+						<UsualGroup name="ГруппаОсновныеРеквизиты" id="3">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основные реквизиты</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>true</ShowTitle>
+							<ChildItems>
+								<InputField name="Код" id="4">
+									<DataPath>Объект.Code</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Код</v8:content>
+										</v8:item>
+									</Title>
+								</InputField>
+								<InputField name="Наименование" id="5">
+									<DataPath>Объект.Description</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Наименование блюда</v8:content>
+										</v8:item>
+									</Title>
+								</InputField>
+								<InputField name="НомерТехкарточки" id="6">
+									<DataPath>Объект.НомерТехкарточки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номер техкарточки</v8:content>
+										</v8:item>
+									</Title>
+								</InputField>
+								<InputField name="ГотовоеБлюдо" id="7">
+									<DataPath>Объект.ГотовоеБлюдо</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Готовое блюдо</v8:content>
+										</v8:item>
+									</Title>
+								</InputField>
+								<InputField name="КатегорияБлюда" id="8">
+									<DataPath>Объект.КатегорияБлюда</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Категория блюда</v8:content>
+										</v8:item>
+									</Title>
+								</InputField>
+								<InputField name="ВремяПриготовления" id="9">
+									<DataPath>Объект.ВремяПриготовления</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Время приготовления (мин)</v8:content>
+										</v8:item>
+									</Title>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПоказатели" id="10">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выход и пищевая ценность</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>true</ShowTitle>
+							<Group>AlwaysHorizontal</Group>
+							<ChildItems>
+								<UsualGroup name="ГруппаВыход" id="11">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выход</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ChildItems>
+										<InputField name="ВыходПорции" id="12">
+											<DataPath>Объект.ВыходПорции</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выход порции (г)</v8:content>
+												</v8:item>
+											</Title>
+										</InputField>
+										<InputField name="СебестоимостьПорции" id="13">
+											<DataPath>Объект.СебестоимостьПорции</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Себестоимость порции</v8:content>
+												</v8:item>
+											</Title>
+											<ReadOnly>true</ReadOnly>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПищеваяЦенность" id="14">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пищевая ценность</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ChildItems>
+										<InputField name="КалорийностьПорции" id="15">
+											<DataPath>Объект.КалорийностьПорции</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Калорийность (ккал)</v8:content>
+												</v8:item>
+											</Title>
+										</InputField>
+										<InputField name="Белки" id="16">
+											<DataPath>Объект.Белки</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Белки (г)</v8:content>
+												</v8:item>
+											</Title>
+										</InputField>
+										<InputField name="Жиры" id="17">
+											<DataPath>Объект.Жиры</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Жиры (г)</v8:content>
+												</v8:item>
+											</Title>
+										</InputField>
+										<InputField name="Углеводы" id="18">
+											<DataPath>Объект.Углеводы</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Углеводы (г)</v8:content>
+												</v8:item>
+											</Title>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКнопкиРасчета" id="19">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кнопки расчета</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<Group>Horizontal</Group>
+							<ChildItems>
+								<Button name="ПересчитатьСебестоимостьКнопка" id="20">
+									<Type>CommandBarButton</Type>
+									<CommandName>ПересчитатьСебестоимость</CommandName>
+								</Button>
+								<Button name="РассчитатьПищевуюЦенностьКнопка" id="21">
+									<Type>CommandBarButton</Type>
+									<CommandName>РассчитатьПищевуюЦенность</CommandName>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаИнгредиенты" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состав ингредиентов</v8:content>
+						</v8:item>
+					</Title>
+					<ChildItems>
+						<Table name="СоставИнгредиентов" id="23">
+							<DataPath>Объект.СоставИнгредиентов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Нормы вложения сырья и продуктов</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalStretch>true</VerticalStretch>
+							<CommandBar name="СоставИнгредиентовКоманднаяПанель" id="24">
+								<Items>
+									<Button name="СоставИнгредиентовДобавитьКнопка" id="25">
+										<Type>CommandBarButton</Type>
+										<CommandName>СоставИнгредиентовДобавить</CommandName>
+									</Button>
+									<Button name="СоставИнгредиентовУдалитьКнопка" id="26">
+										<Type>CommandBarButton</Type>
+										<CommandName>СоставИнгредиентовУдалить</CommandName>
+									</Button>
+								</Items>
+							</CommandBar>
+							<Columns>
+								<InputField name="СоставИнгредиентовНомерСтроки" id="27">
+									<DataPath>СоставИнгредиентов.НомерСтроки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>№</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>3</Width>
+								</InputField>
+								<InputField name="СоставИнгредиентовИнгредиент" id="28">
+									<DataPath>СоставИнгредиентов.Ингредиент</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Наименование сырья</v8:content>
+										</v8:item>
+									</Title>
+									<Width>25</Width>
+								</InputField>
+								<InputField name="СоставИнгредиентовНормаБрутто" id="29">
+									<DataPath>СоставИнгредиентов.НормаБрутто</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Норма брутто (г)</v8:content>
+										</v8:item>
+									</Title>
+									<Width>12</Width>
+								</InputField>
+								<InputField name="СоставИнгредиентовПроцентОтходов" id="30">
+									<DataPath>СоставИнгредиентов.ПроцентОтходов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>% отходов</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+								</InputField>
+								<InputField name="СоставИнгредиентовНормаНетто" id="31">
+									<DataPath>СоставИнгредиентов.НормаНетто</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Норма нетто (г)</v8:content>
+										</v8:item>
+									</Title>
+									<Width>12</Width>
+								</InputField>
+								<InputField name="СоставИнгредиентовСтоимостьЕдиницы" id="32">
+									<DataPath>СоставИнгредиентов.СтоимостьЕдиницы</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Цена за кг</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>10</Width>
+								</InputField>
+								<InputField name="СоставИнгредиентовСуммаСтоимости" id="33">
+									<DataPath>СоставИнгредиентов.СуммаСтоимости</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сумма</v8:content>
+										</v8:item>
+									</Title>
+									<ReadOnly>true</ReadOnly>
+									<Width>10</Width>
+								</InputField>
+								<InputField name="СоставИнгредиентовКомментарий" id="34">
+									<DataPath>СоставИнгредиентов.Комментарий</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Способ обработки</v8:content>
+										</v8:item>
+									</Title>
+									<Width>20</Width>
+								</InputField>
+							</Columns>
+							<RowSelectionMode>Row</RowSelectionMode>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаТехнология" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Технология</v8:content>
+						</v8:item>
+					</Title>
+					<ChildItems>
+						<InputField name="ТехнологияПриготовления" id="36">
+							<DataPath>Объект.ТехнологияПриготовления</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Технология приготовления</v8:content>
+								</v8:item>
+							</Title>
+							<MultiLine>true</MultiLine>
+							<ExtendedEdit>true</ExtendedEdit>
+							<Height>8</Height>
+							<VerticalStretch>true</VerticalStretch>
+						</InputField>
+						<InputField name="ТребованияКСырью" id="37">
+							<DataPath>Объект.ТребованияКСырью</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Требования к качеству сырья</v8:content>
+								</v8:item>
+							</Title>
+							<MultiLine>true</MultiLine>
+							<ExtendedEdit>true</ExtendedEdit>
+							<Height>4</Height>
+						</InputField>
+						<InputField name="ПоказателиГотовогоБлюда" id="38">
+							<DataPath>Объект.ПоказателиГотовогоБлюда</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Показатели готового блюда</v8:content>
+								</v8:item>
+							</Title>
+							<MultiLine>true</MultiLine>
+							<ExtendedEdit>true</ExtendedEdit>
+							<Height>4</Height>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</Items>
+</Form>

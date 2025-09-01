@@ -198,201 +198,30 @@
 				</Properties>
 			</Attribute>
 		</ChildObjects>
-		<TabularSections>
-			<TabularSection uuid="b8c9f0a1-234f-67bc-89ab-890123456789">
+			<Attribute uuid="h7i8j9k0-1234-56gh-789i-012345678901">
 				<Properties>
-					<Name>СоставИнгредиентов</Name>
+					<Name>Техкарточка</Name>
 					<Synonym>
 						<key>ru</key>
-						<value>Состав ингредиентов</value>
+						<value>Технологическая карта</value>
 					</Synonym>
-					<Comment>Табличная часть для указания состава ингредиентов рецепта</Comment>
+					<Comment>Ссылка на технологическую карту блюда</Comment>
+					<Type>
+						<TypeSet>
+							<Type>CatalogRef.Техкарточки</Type>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
 					<Tooltip>
 						<key>ru</key>
-						<value>Укажите все ингредиенты необходимые для приготовления блюда</value>
+						<value>Выберите технологическую карту блюда</value>
 					</Tooltip>
-					<StandardAttributes>
-						<Name>LineNumber</Name>
-						<FillValue xsi:type="Number">0</FillValue>
-						<FullTextSearch>Use</FullTextSearch>
-						<Mask>
-							<key>ru</key>
-							<value/>
-						</Mask>
-						<DataHistory>Use</DataHistory>
-					</StandardAttributes>
+					<FillValue xsi:type="CatalogRef.Техкарточки"/>
+					<FillChecking>ShowError</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
 				</Properties>
-				<ChildObjects>
-					<Attribute uuid="c9d0a1b2-345a-78cd-9abc-901234567890">
-						<Properties>
-							<Name>Ингредиент</Name>
-							<Synonym>
-								<key>ru</key>
-								<value>Ингредиент</value>
-							</Synonym>
-							<Comment>Ссылка на номенклатуру ингредиента</Comment>
-							<Type>
-								<TypeSet>
-									<Type>CatalogRef.Номенклатура</Type>
-								</TypeSet>
-							</Type>
-							<PasswordText>false</PasswordText>
-							<Tooltip>
-								<key>ru</key>
-								<value>Выберите ингредиент из справочника номенклатуры</value>
-							</Tooltip>
-							<FillValue xsi:type="CatalogRef.Номенклатура"/>
-							<FillChecking>ShowError</FillChecking>
-							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-							<ChoiceParameterLinks>
-								<xsi:type>ChoiceParameterLink</xsi:type>
-								<value>
-									<Name>ВидНоменклатуры</Name>
-									<DataPath>КонстантыНабор.ВидНоменклатурыМатериалы</DataPath>
-								</value>
-							</ChoiceParameterLinks>
-							<FullTextSearch>Use</FullTextSearch>
-							<DataHistory>Use</DataHistory>
-						</Properties>
-					</Attribute>
-					<Attribute uuid="d0e1b2c3-456b-89de-abcd-012345678901">
-						<Properties>
-							<Name>Количество</Name>
-							<Synonym>
-								<key>ru</key>
-								<value>Количество</value>
-							</Synonym>
-							<Comment>Количество ингредиента необходимого для рецепта</Comment>
-							<Type>
-								<TypeSet>
-									<Type>Number</Type>
-									<NumberQualifiers>
-										<Digits>15</Digits>
-										<FractionDigits>3</FractionDigits>
-										<AllowedSign>Nonnegative</AllowedSign>
-									</NumberQualifiers>
-								</TypeSet>
-							</Type>
-							<PasswordText>false</PasswordText>
-							<Tooltip>
-								<key>ru</key>
-								<value>Укажите количество ингредиента</value>
-							</Tooltip>
-							<FillValue xsi:type="Number">0</FillValue>
-							<FillChecking>ShowError</FillChecking>
-							<FullTextSearch>Use</FullTextSearch>
-							<DataHistory>Use</DataHistory>
-						</Properties>
-					</Attribute>
-					<Attribute uuid="e1f2c3d4-567c-90ef-bcde-123456789012">
-						<Properties>
-							<Name>ЕдиницаИзмерения</Name>
-							<Synonym>
-								<key>ru</key>
-								<value>Единица измерения</value>
-							</Synonym>
-							<Comment>Единица измерения ингредиента</Comment>
-							<Type>
-								<TypeSet>
-									<Type>CatalogRef.КлассификаторЕдиницИзмерения</Type>
-								</TypeSet>
-							</Type>
-							<PasswordText>false</PasswordText>
-							<Tooltip>
-								<key>ru</key>
-								<value>Единица измерения ингредиента</value>
-							</Tooltip>
-							<FillValue xsi:type="CatalogRef.КлассификаторЕдиницИзмерения"/>
-							<FillChecking>ShowError</FillChecking>
-							<FullTextSearch>Use</FullTextSearch>
-							<DataHistory>Use</DataHistory>
-						</Properties>
-					</Attribute>
-					<Attribute uuid="f2a3d4e5-678d-01fa-cdef-234567890123">
-						<Properties>
-							<Name>СтоимостьЕдиницы</Name>
-							<Synonym>
-								<key>ru</key>
-								<value>Стоимость единицы</value>
-							</Synonym>
-							<Comment>Стоимость единицы ингредиента</Comment>
-							<Type>
-								<TypeSet>
-									<Type>Number</Type>
-									<NumberQualifiers>
-										<Digits>15</Digits>
-										<FractionDigits>2</FractionDigits>
-										<AllowedSign>Nonnegative</AllowedSign>
-									</NumberQualifiers>
-								</TypeSet>
-							</Type>
-							<PasswordText>false</PasswordText>
-							<Tooltip>
-								<key>ru</key>
-								<value>Стоимость единицы ингредиента</value>
-							</Tooltip>
-							<FillValue xsi:type="Number">0</FillValue>
-							<FullTextSearch>Use</FullTextSearch>
-							<DataHistory>Use</DataHistory>
-						</Properties>
-					</Attribute>
-					<Attribute uuid="a3b4e5f6-789e-12ab-def0-345678901234">
-						<Properties>
-							<Name>СуммаСтоимости</Name>
-							<Synonym>
-								<key>ru</key>
-								<value>Сумма стоимости</value>
-							</Synonym>
-							<Comment>Общая стоимость ингредиента (количество × стоимость единицы)</Comment>
-							<Type>
-								<TypeSet>
-									<Type>Number</Type>
-									<NumberQualifiers>
-										<Digits>15</Digits>
-										<FractionDigits>2</FractionDigits>
-										<AllowedSign>Nonnegative</AllowedSign>
-									</NumberQualifiers>
-								</TypeSet>
-							</Type>
-							<PasswordText>false</PasswordText>
-							<Tooltip>
-								<key>ru</key>
-								<value>Общая стоимость ингредиента в рецепте</value>
-							</Tooltip>
-							<FillValue xsi:type="Number">0</FillValue>
-							<FullTextSearch>Use</FullTextSearch>
-							<DataHistory>Use</DataHistory>
-						</Properties>
-					</Attribute>
-					<Attribute uuid="b4c5f6a7-890f-23bc-ea01-456789012345">
-						<Properties>
-							<Name>Комментарий</Name>
-							<Synonym>
-								<key>ru</key>
-								<value>Комментарий</value>
-							</Synonym>
-							<Comment>Дополнительные сведения об ингредиенте</Comment>
-							<Type>
-								<TypeSet>
-									<Type>String</Type>
-									<StringQualifiers>
-										<Length>150</Length>
-										<AllowedLength>Variable</AllowedLength>
-									</StringQualifiers>
-								</TypeSet>
-							</Type>
-							<PasswordText>false</PasswordText>
-							<Tooltip>
-								<key>ru</key>
-								<value>Дополнительные сведения об использовании ингредиента</value>
-							</Tooltip>
-							<FillValue xsi:type="String"/>
-							<FullTextSearch>Use</FullTextSearch>
-							<DataHistory>Use</DataHistory>
-						</Properties>
-					</Attribute>
-				</ChildObjects>
-			</TabularSection>
-		</TabularSections>
+			</Attribute>
 	</Catalog>
 </MetaDataObject>

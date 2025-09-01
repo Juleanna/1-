@@ -43,35 +43,35 @@
 			</ToolTip>
 			<Action>ПересчитатьСебестоимость</Action>
 		</Command>
-		<Command name="СоставИнгредиентовДобавить" id="2">
+		<Command name="СоздатьТехкарточку" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Добавить</v8:content>
+					<v8:content>Создать техкарточку</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Добавить ингредиент в рецепт</v8:content>
+					<v8:content>Создать новую технологическую карту</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>СоставИнгредиентовДобавить</Action>
+			<Action>СоздатьТехкарточку</Action>
 		</Command>
-		<Command name="СоставИнгредиентовУдалить" id="3">
+		<Command name="ОткрытьТехкарточку" id="3">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Удалить</v8:content>
+					<v8:content>Открыть техкарточку</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Удалить выбранный ингредиент</v8:content>
+					<v8:content>Открыть выбранную технологическую карту</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>СоставИнгредиентовУдалить</Action>
+			<Action>ОткрытьТехкарточку</Action>
 		</Command>
 	</Commands>
 	<Attributes>
@@ -80,126 +80,6 @@
 				<Type>CatalogObject.КулинарныеРецепты</Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
-		</Attribute>
-		<Attribute name="СоставИнгредиентов" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Состав ингредиентов</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<Type>ValueTable</Type>
-			</Type>
-			<Columns>
-				<Column name="НомерСтроки" id="1">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>№</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<Type>Number</Type>
-						<NumberQualifiers>
-							<Digits>3</Digits>
-							<FractionDigits>0</FractionDigits>
-							<AllowedSign>Nonnegative</AllowedSign>
-						</NumberQualifiers>
-					</Type>
-				</Column>
-				<Column name="Ингредиент" id="2">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Ингредиент</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<Type>CatalogRef.Номенклатура</Type>
-					</Type>
-					<ChoiceParameterLinks>
-						<ChoiceParameterLink>
-							<Name>ВидНоменклатуры</Name>
-							<DataPath>КонстантыНабор.ВидНоменклатурыМатериалы</DataPath>
-						</ChoiceParameterLink>
-					</ChoiceParameterLinks>
-				</Column>
-				<Column name="Количество" id="3">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Количество</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<Type>Number</Type>
-						<NumberQualifiers>
-							<Digits>15</Digits>
-							<FractionDigits>3</FractionDigits>
-							<AllowedSign>Nonnegative</AllowedSign>
-						</NumberQualifiers>
-					</Type>
-				</Column>
-				<Column name="ЕдиницаИзмерения" id="4">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Единица</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<Type>CatalogRef.КлассификаторЕдиницИзмерения</Type>
-					</Type>
-				</Column>
-				<Column name="СтоимостьЕдиницы" id="5">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Цена</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<Type>Number</Type>
-						<NumberQualifiers>
-							<Digits>15</Digits>
-							<FractionDigits>2</FractionDigits>
-							<AllowedSign>Nonnegative</AllowedSign>
-						</NumberQualifiers>
-					</Type>
-				</Column>
-				<Column name="СуммаСтоимости" id="6">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Сумма</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<Type>Number</Type>
-						<NumberQualifiers>
-							<Digits>15</Digits>
-							<FractionDigits>2</FractionDigits>
-							<AllowedSign>Nonnegative</AllowedSign>
-						</NumberQualifiers>
-					</Type>
-				</Column>
-				<Column name="Комментарий" id="7">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Комментарий</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<Type>String</Type>
-						<StringQualifiers>
-							<Length>150</Length>
-							<AllowedLength>Variable</AllowedLength>
-						</StringQualifiers>
-					</Type>
-				</Column>
-			</Columns>
 		</Attribute>
 	</Attributes>
 	<Items>
@@ -339,122 +219,46 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<Table name="СоставИнгредиентов" id="29">
-			<DataPath>СоставИнгредиентов</DataPath>
+		<InputField name="Техкарточка" id="29">
+			<DataPath>Объект.Техкарточка</DataPath>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Состав ингредиентов</v8:content>
+					<v8:content>Технологическая карта</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Укажите все ингредиенты необходимые для приготовления блюда</v8:content>
+					<v8:content>Выберите технологическую карту блюда</v8:content>
 				</v8:item>
 			</ToolTip>
-			<VerticalStretch>true</VerticalStretch>
-			<CommandBar name="СоставИнгредиентовКоманднаяПанель" id="30">
-				<Items>
-					<Button name="СоставИнгредиентовДобавитьКнопка" id="31">
-						<Type>CommandBarButton</Type>
-						<CommandName>СоставИнгредиентовДобавить</CommandName>
-						<ExtendedTooltip name="СоставИнгредиентовДобавитьКнопкаРасширеннаяПодсказка" id="32"/>
-					</Button>
-					<Button name="СоставИнгредиентовУдалитьКнопка" id="33">
-						<Type>CommandBarButton</Type>
-						<CommandName>СоставИнгредиентовУдалить</CommandName>
-						<ExtendedTooltip name="СоставИнгредиентовУдалитьКнопкаРасширеннаяПодсказка" id="34"/>
-					</Button>
-				</Items>
-			</CommandBar>
-			<Columns>
-				<InputField name="СоставИнгредиентовНомерСтроки" id="35">
-					<DataPath>СоставИнгредиентов.НомерСтроки</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>№</v8:content>
-						</v8:item>
-					</Title>
-					<ReadOnly>true</ReadOnly>
-					<Width>3</Width>
-					<ContextMenu name="СоставИнгредиентовНомерСтрокиКонтекстноеМеню" id="36"/>
-					<ExtendedTooltip name="СоставИнгредиентовНомерСтрокиРасширеннаяПодсказка" id="37"/>
-				</InputField>
-				<InputField name="СоставИнгредиентовИнгредиент" id="38">
-					<DataPath>СоставИнгредиентов.Ингредиент</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Ингредиент</v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="СоставИнгредиентовИнгредиентКонтекстноеМеню" id="39"/>
-					<ExtendedTooltip name="СоставИнгредиентовИнгредиентРасширеннаяПодсказка" id="40"/>
-				</InputField>
-				<InputField name="СоставИнгредиентовКоличество" id="41">
-					<DataPath>СоставИнгредиентов.Количество</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Количество</v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="СоставИнгредиентовКоличествоКонтекстноеМеню" id="42"/>
-					<ExtendedTooltip name="СоставИнгредиентовКоличествоРасширеннаяПодсказка" id="43"/>
-				</InputField>
-				<InputField name="СоставИнгредиентовЕдиницаИзмерения" id="44">
-					<DataPath>СоставИнгредиентов.ЕдиницаИзмерения</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Единица</v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="СоставИнгредиентовЕдиницаИзмеренияКонтекстноеМеню" id="45"/>
-					<ExtendedTooltip name="СоставИнгредиентовЕдиницаИзмеренияРасширеннаяПодсказка" id="46"/>
-				</InputField>
-				<InputField name="СоставИнгредиентовСтоимостьЕдиницы" id="47">
-					<DataPath>СоставИнгредиентов.СтоимостьЕдиницы</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Цена</v8:content>
-						</v8:item>
-					</Title>
-					<ReadOnly>true</ReadOnly>
-					<ContextMenu name="СоставИнгредиентовСтоимостьЕдиницыКонтекстноеМеню" id="48"/>
-					<ExtendedTooltip name="СоставИнгредиентовСтоимостьЕдиницыРасширеннаяПодсказка" id="49"/>
-				</InputField>
-				<InputField name="СоставИнгредиентовСуммаСтоимости" id="50">
-					<DataPath>СоставИнгредиентов.СуммаСтоимости</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Сумма</v8:content>
-						</v8:item>
-					</Title>
-					<ReadOnly>true</ReadOnly>
-					<ContextMenu name="СоставИнгредиентовСуммаСтоимостиКонтекстноеМеню" id="51"/>
-					<ExtendedTooltip name="СоставИнгредиентовСуммаСтоимостиРасширеннаяПодсказка" id="52"/>
-				</InputField>
-				<InputField name="СоставИнгредиентовКомментарий" id="53">
-					<DataPath>СоставИнгредиентов.Комментарий</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Комментарий</v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="СоставИнгредиентовКомментарийКонтекстноеМеню" id="54"/>
-					<ExtendedTooltip name="СоставИнгредиентовКомментарийРасширеннаяПодсказка" id="55"/>
-				</InputField>
-			</Columns>
-			<RowSelectionMode>Row</RowSelectionMode>
-			<ContextMenu name="СоставИнгредиентовКонтекстноеМеню" id="56"/>
-			<ExtendedTooltip name="СоставИнгредиентовРасширеннаяПодсказка" id="57"/>
-		</Table>
+			<ContextMenu name="ТехкарточкаКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ТехкарточкаРасширеннаяПодсказка" id="31"/>
+		</InputField>
+		<UsualGroup name="ГруппаКнопкиТехкарточки" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа с техкарточкой</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<Group>Horizontal</Group>
+			<ChildItems>
+				<Button name="СоздатьТехкарточкуКнопка" id="33">
+					<Type>CommandBarButton</Type>
+					<CommandName>СоздатьТехкарточку</CommandName>
+					<ExtendedTooltip name="СоздатьТехкарточкуКнопкаРасширеннаяПодсказка" id="34"/>
+				</Button>
+				<Button name="ОткрытьТехкарточкуКнопка" id="35">
+					<Type>CommandBarButton</Type>
+					<CommandName>ОткрытьТехкарточку</CommandName>
+					<ExtendedTooltip name="ОткрытьТехкарточкуКнопкаРасширеннаяПодсказка" id="36"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
 		<InputField name="ТехнологияПриготовления" id="58">
 			<DataPath>Объект.ТехнологияПриготовления</DataPath>
 			<Title>
