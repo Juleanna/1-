@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:mdclass="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Enum uuid="y7x6w5v4-012a-45bc-678d-654321098765">
+		<Properties>
+			<Name>РежимыОбновленияЦен</Name>
+			<Synonym>
+				<key>ru</key>
+				<value>Режимы обновления цен</value>
+			</Synonym>
+			<Comment>Перечисление режимов обновления цен в технологических картах</Comment>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultPresentation>AsDescription</DefaultPresentation>
+			<QuickChoice>true</QuickChoice>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="z8y7x6w5-123b-56cd-789e-765432109876">
+				<Properties>
+					<Name>ВсеТехкарточки</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Все технологические карты</value>
+					</Synonym>
+					<Comment>Обновить цены во всех технологических картах</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a9z8y7x6-234c-67de-890f-876543210987">
+				<Properties>
+					<Name>ПоИнгредиенту</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>По конкретному ингредиенту</value>
+					</Synonym>
+					<Comment>Обновить цены только для выбранного ингредиента</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b0a9z8y7-345d-78ef-901a-987654321098">
+				<Properties>
+					<Name>ПоКатегории</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>По категории блюд</value>
+					</Synonym>
+					<Comment>Обновить цены для техкарточек определенной категории</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

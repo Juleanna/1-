@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:mdclass="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Catalog uuid="z1y2x3w4-5678-90ab-cdef-987654321098">
+		<InternalInfo>
+			<xsi:type>CatalogInfo</xsi:type>
+		</InternalInfo>
+		<Properties>
+			<Name>ЦеныНаИнгредиенты</Name>
+			<Synonym>
+				<key>ru</key>
+				<value>Цены на ингредиенты</value>
+			</Synonym>
+			<Comment>Справочник для централизованного ведения цен на ингредиенты и сырье</Comment>
+			<UseStandardCommands>true</UseStandardCommands>
+			<InputByString>
+				<xsi:type>CatalogInputByString</xsi:type>
+				<value>Description</value>
+			</InputByString>
+			<Representation>List</Representation>
+			<LengthOfCode>9</LengthOfCode>
+			<LengthOfDescription>100</LengthOfDescription>
+			<CodeType>String</CodeType>
+			<CodeAllowedLength>Variable</CodeAllowedLength>
+			<CodeSeries>WholeCatalog</CodeSeries>
+			<CheckUnique>true</CheckUnique>
+			<Autonumbering>true</Autonumbering>
+			<DefaultPresentation>AsDescription</DefaultPresentation>
+			<EditType>InDialog</EditType>
+			<QuickChoice>true</QuickChoice>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="y2x3w4v5-6789-01bc-def2-876543210987">
+				<Properties>
+					<Name>Ингредиент</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Ингредиент</value>
+					</Synonym>
+					<Comment>Ссылка на номенклатуру ингредиента</Comment>
+					<Type>
+						<TypeSet>
+							<Type>CatalogRef.Номенклатура</Type>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Выберите ингредиент из справочника номенклатуры</value>
+					</Tooltip>
+					<FillValue xsi:type="CatalogRef.Номенклатура"/>
+					<FillChecking>ShowError</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks>
+						<xsi:type>ChoiceParameterLink</xsi:type>
+						<value>
+							<Name>ВидНоменклатуры</Name>
+							<DataPath>КонстантыНабор.ВидНоменклатурыИнгредиенты</DataPath>
+						</value>
+					</ChoiceParameterLinks>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="x3w4v5u6-789a-12cd-ef34-765432109876">
+				<Properties>
+					<Name>ЕдиницаИзмерения</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Единица измерения</value>
+					</Synonym>
+					<Comment>Единица измерения для цены (кг, л, шт.)</Comment>
+					<Type>
+						<TypeSet>
+							<Type>CatalogRef.КлассификаторЕдиницИзмерения</Type>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Выберите единицу измерения</value>
+					</Tooltip>
+					<FillValue xsi:type="CatalogRef.КлассификаторЕдиницИзмерения"/>
+					<FillChecking>ShowError</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="w4v5u6t7-890b-23de-f456-654321098765">
+				<Properties>
+					<Name>ЦенаЗаЕдиницу</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Цена за единицу</value>
+					</Synonym>
+					<Comment>Цена за единицу измерения ингредиента</Comment>
+					<Type>
+						<TypeSet>
+							<Type>Number</Type>
+							<NumberQualifiers>
+								<Digits>15</Digits>
+								<FractionDigits>2</FractionDigits>
+								<AllowedSign>Nonnegative</AllowedSign>
+							</NumberQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Введите цену за единицу измерения</value>
+					</Tooltip>
+					<FillValue xsi:type="Number">0</FillValue>
+					<FillChecking>ShowError</FillChecking>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="v5u6t7s8-901c-34ef-5678-543210987654">
+				<Properties>
+					<Name>ДатаУстановкиЦены</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Дата установки цены</value>
+					</Synonym>
+					<Comment>Дата установки или последнего изменения цены</Comment>
+					<Type>
+						<TypeSet>
+							<Type>Date</Type>
+							<DateQualifiers>
+								<DateFractions>Date</DateFractions>
+							</DateQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Дата установки или изменения цены</value>
+					</Tooltip>
+					<FillValue xsi:type="Date">0001-01-01T00:00:00</FillValue>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="u6t7s8r9-012d-45fa-6789-432109876543">
+				<Properties>
+					<Name>Поставщик</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Поставщик</value>
+					</Synonym>
+					<Comment>Основной поставщик ингредиента</Comment>
+					<Type>
+						<TypeSet>
+							<Type>CatalogRef.Контрагенты</Type>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Выберите основного поставщика</value>
+					</Tooltip>
+					<FillValue xsi:type="CatalogRef.Контрагенты"/>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks>
+						<xsi:type>ChoiceParameterLink</xsi:type>
+						<value>
+							<Name>ТипКонтрагента</Name>
+							<DataPath>Перечисления.ТипыКонтрагентов.Поставщик</DataPath>
+						</value>
+					</ChoiceParameterLinks>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="t7s8r9q0-123e-56ab-789a-321098765432">
+				<Properties>
+					<Name>Активность</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Активность</value>
+					</Synonym>
+					<Comment>Признак активности цены</Comment>
+					<Type>
+						<TypeSet>
+							<Type>Boolean</Type>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Отметьте для активных цен</value>
+					</Tooltip>
+					<FillValue xsi:type="Boolean">true</FillValue>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="s8r9q0p1-234f-67bc-890b-210987654321">
+				<Properties>
+					<Name>Комментарий</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Комментарий</value>
+					</Synonym>
+					<Comment>Дополнительная информация о цене</Comment>
+					<Type>
+						<TypeSet>
+							<Type>String</Type>
+							<StringQualifiers>
+								<Length>500</Length>
+								<AllowedLength>Variable</AllowedLength>
+							</StringQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Дополнительная информация</value>
+					</Tooltip>
+					<FillValue xsi:type="String"/>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+					<MultiLine>true</MultiLine>
+				</Properties>
+			</Attribute>
+		</ChildObjects>
+		<TabularSections>
+			<TabularSection uuid="r9q0p1o2-345a-78cd-901c-109876543210">
+				<Properties>
+					<Name>ИсторияЦен</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>История изменения цен</value>
+					</Synonym>
+					<Comment>Архив изменений цен для анализа динамики</Comment>
+					<Tooltip>
+						<key>ru</key>
+						<value>История изменений цен на ингредиент</value>
+					</Tooltip>
+					<StandardAttributes>
+						<Name>LineNumber</Name>
+						<FillValue xsi:type="Number">0</FillValue>
+						<FullTextSearch>Use</FullTextSearch>
+						<Mask>
+							<key>ru</key>
+							<value/>
+						</Mask>
+						<DataHistory>Use</DataHistory>
+					</StandardAttributes>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="q0p1o2n3-456b-89de-012d-098765432109">
+						<Properties>
+							<Name>ДатаИзменения</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>Дата изменения</value>
+							</Synonym>
+							<Comment>Дата изменения цены</Comment>
+							<Type>
+								<TypeSet>
+									<Type>Date</Type>
+									<DateQualifiers>
+										<DateFractions>Date</DateFractions>
+									</DateQualifiers>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Дата изменения цены</value>
+							</Tooltip>
+							<FillValue xsi:type="Date">0001-01-01T00:00:00</FillValue>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="p1o2n3m4-567c-90ef-123e-987654321098">
+						<Properties>
+							<Name>СтараяЦена</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>Старая цена</value>
+							</Synonym>
+							<Comment>Предыдущая цена</Comment>
+							<Type>
+								<TypeSet>
+									<Type>Number</Type>
+									<NumberQualifiers>
+										<Digits>15</Digits>
+										<FractionDigits>2</FractionDigits>
+										<AllowedSign>Nonnegative</AllowedSign>
+									</NumberQualifiers>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Предыдущая цена ингредиента</value>
+							</Tooltip>
+							<FillValue xsi:type="Number">0</FillValue>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="o2n3m4l5-678d-01ab-234f-876543210987">
+						<Properties>
+							<Name>НоваяЦена</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>Новая цена</value>
+							</Synonym>
+							<Comment>Новая цена</Comment>
+							<Type>
+								<TypeSet>
+									<Type>Number</Type>
+									<NumberQualifiers>
+										<Digits>15</Digits>
+										<FractionDigits>2</FractionDigits>
+										<AllowedSign>Nonnegative</AllowedSign>
+									</NumberQualifiers>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Новая цена ингредиента</value>
+							</Tooltip>
+							<FillValue xsi:type="Number">0</FillValue>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="n3m4l5k6-789e-12bc-345a-765432109876">
+						<Properties>
+							<Name>ПричинаИзменения</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>Причина изменения</value>
+							</Synonym>
+							<Comment>Причина изменения цены</Comment>
+							<Type>
+								<TypeSet>
+									<Type>String</Type>
+									<StringQualifiers>
+										<Length>200</Length>
+										<AllowedLength>Variable</AllowedLength>
+									</StringQualifiers>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Укажите причину изменения цены</value>
+							</Tooltip>
+							<FillValue xsi:type="String"/>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+		</TabularSections>
+	</Catalog>
+</MetaDataObject>

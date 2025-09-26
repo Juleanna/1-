@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:mdclass="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<DataProcessor uuid="n6m5l4k3-901b-45cd-678e-543210987654">
+		<Properties>
+			<Name>ОбновлениеЦенВТехКарточках</Name>
+			<Synonym>
+				<key>ru</key>
+				<value>Обновление цен в технологических картах</value>
+			</Synonym>
+			<Comment>Обработка для массового обновления цен во всех технологических картах</Comment>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>Обработка.ОбновлениеЦенВТехКарточках.Форма.Форма</DefaultForm>
+			<AuxiliaryForm>Обработка.ОбновлениеЦенВТехКарточках.Форма.Форма</AuxiliaryForm>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="o7n6m5l4-012c-56de-789f-654321098765">
+				<Properties>
+					<Name>РежимОбновления</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Режим обновления</value>
+					</Synonym>
+					<Comment>Режим обновления цен</Comment>
+					<Type>
+						<TypeSet>
+							<Type>EnumRef.РежимыОбновленияЦен</Type>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Выберите режим обновления цен</value>
+					</Tooltip>
+					<FillValue xsi:type="EnumRef.РежимыОбновленияЦен"/>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="p8o7n6m5-123d-67ef-890a-765432109876">
+				<Properties>
+					<Name>ВыбранныйИнгредиент</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Выбранный ингредиент</value>
+					</Synonym>
+					<Comment>Ингредиент для выборочного обновления</Comment>
+					<Type>
+						<TypeSet>
+							<Type>CatalogRef.Номенклатура</Type>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Выберите ингредиент для обновления</value>
+					</Tooltip>
+					<FillValue xsi:type="CatalogRef.Номенклатура"/>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="q9p8o7n6-234e-78ab-901b-876543210987">
+				<Properties>
+					<Name>КоличествоОбновленных</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Количество обновленных</value>
+					</Synonym>
+					<Comment>Количество обновленных техкарточек</Comment>
+					<Type>
+						<TypeSet>
+							<Type>Number</Type>
+							<NumberQualifiers>
+								<Digits>10</Digits>
+								<FractionDigits>0</FractionDigits>
+								<AllowedSign>Nonnegative</AllowedSign>
+							</NumberQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Количество обновленных техкарточек</value>
+					</Tooltip>
+					<FillValue xsi:type="Number">0</FillValue>
+					<ReadOnly>true</ReadOnly>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="r0q9p8o7-345f-89bc-012c-987654321098">
+				<Properties>
+					<Name>КоличествоОшибок</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Количество ошибок</value>
+					</Synonym>
+					<Comment>Количество ошибок при обновлении</Comment>
+					<Type>
+						<TypeSet>
+							<Type>Number</Type>
+							<NumberQualifiers>
+								<Digits>10</Digits>
+								<FractionDigits>0</FractionDigits>
+								<AllowedSign>Nonnegative</AllowedSign>
+							</NumberQualifiers>
+						</TypeSet>
+					</Type>
+					<PasswordText>false</PasswordText>
+					<Tooltip>
+						<key>ru</key>
+						<value>Количество ошибок при обновлении</value>
+					</Tooltip>
+					<FillValue xsi:type="Number">0</FillValue>
+					<ReadOnly>true</ReadOnly>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+		</ChildObjects>
+		<TabularSections>
+			<TabularSection uuid="s1r0q9p8-456a-90cd-123d-098765432109">
+				<Properties>
+					<Name>РезультатОбработки</Name>
+					<Synonym>
+						<key>ru</key>
+						<value>Результат обработки</value>
+					</Synonym>
+					<Comment>Результат обновления цен</Comment>
+					<Tooltip>
+						<key>ru</key>
+						<value>Детальный результат обновления цен</value>
+					</Tooltip>
+					<StandardAttributes>
+						<Name>LineNumber</Name>
+						<FillValue xsi:type="Number">0</FillValue>
+						<FullTextSearch>Use</FullTextSearch>
+						<Mask>
+							<key>ru</key>
+							<value/>
+						</Mask>
+						<DataHistory>Use</DataHistory>
+					</StandardAttributes>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="t2s1r0q9-567b-01de-234e-109876543210">
+						<Properties>
+							<Name>ТехКарточка</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>Техкарточка</value>
+							</Synonym>
+							<Comment>Обработанная техкарточка</Comment>
+							<Type>
+								<TypeSet>
+									<Type>CatalogRef.Техкарточки</Type>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Техкарточка</value>
+							</Tooltip>
+							<FillValue xsi:type="CatalogRef.Техкарточки"/>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="u3t2s1r0-678c-12ef-345f-210987654321">
+						<Properties>
+							<Name>СтатусОбработки</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>Статус</value>
+							</Synonym>
+							<Comment>Статус обработки техкарточки</Comment>
+							<Type>
+								<TypeSet>
+									<Type>String</Type>
+									<StringQualifiers>
+										<Length>50</Length>
+										<AllowedLength>Variable</AllowedLength>
+									</StringQualifiers>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Статус обработки</value>
+							</Tooltip>
+							<FillValue xsi:type="String"/>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="v4u3t2s1-789d-23ab-456a-321098765432">
+						<Properties>
+							<Name>СтараяСебестоимость</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>Старая себестоимость</value>
+							</Synonym>
+							<Comment>Себестоимость до обновления</Comment>
+							<Type>
+								<TypeSet>
+									<Type>Number</Type>
+									<NumberQualifiers>
+										<Digits>15</Digits>
+										<FractionDigits>2</FractionDigits>
+										<AllowedSign>Nonnegative</AllowedSign>
+									</NumberQualifiers>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Себестоимость до обновления цен</value>
+							</Tooltip>
+							<FillValue xsi:type="Number">0</FillValue>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="w5v4u3t2-890e-34bc-567b-432109876543">
+						<Properties>
+							<Name>НоваяСебестоимость</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>Новая себестоимость</value>
+							</Synonym>
+							<Comment>Себестоимость после обновления</Comment>
+							<Type>
+								<TypeSet>
+									<Type>Number</Type>
+									<NumberQualifiers>
+										<Digits>15</Digits>
+										<FractionDigits>2</FractionDigits>
+										<AllowedSign>Nonnegative</AllowedSign>
+									</NumberQualifiers>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Себестоимость после обновления цен</value>
+							</Tooltip>
+							<FillValue xsi:type="Number">0</FillValue>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="x6w5v4u3-901f-45cd-678c-543210987654">
+						<Properties>
+							<Name>ТекстОшибки</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>Текст ошибки</value>
+							</Synonym>
+							<Comment>Текст ошибки при обработке</Comment>
+							<Type>
+								<TypeSet>
+									<Type>String</Type>
+									<StringQualifiers>
+										<Length>500</Length>
+										<AllowedLength>Variable</AllowedLength>
+									</StringQualifiers>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Текст ошибки</value>
+							</Tooltip>
+							<FillValue xsi:type="String"/>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+		</TabularSections>
+	</DataProcessor>
+</MetaDataObject>

@@ -524,14 +524,45 @@
 							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
+					<Attribute uuid="z9y8x7w6-9012-34ab-567c-901234567890">
+						<Properties>
+							<Name>ЦенаИнгредиента</Name>
+							<Synonym>
+								<key>ru</key>
+								<value>Цена ингредиента</value>
+							</Synonym>
+							<Comment>Ссылка на цену ингредиента из справочника цен</Comment>
+							<Type>
+								<TypeSet>
+									<Type>CatalogRef.ЦеныНаИнгредиенты</Type>
+								</TypeSet>
+							</Type>
+							<PasswordText>false</PasswordText>
+							<Tooltip>
+								<key>ru</key>
+								<value>Выберите цену ингредиента из справочника</value>
+							</Tooltip>
+							<FillValue xsi:type="CatalogRef.ЦеныНаИнгредиенты"/>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks>
+								<xsi:type>ChoiceParameterLink</xsi:type>
+								<value>
+									<Name>Ингредиент</Name>
+									<DataPath>Ингредиент</DataPath>
+								</value>
+							</ChoiceParameterLinks>
+							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
+						</Properties>
+					</Attribute>
 					<Attribute uuid="a0b1c2d3-9012-34ab-567c-901234567890">
 						<Properties>
 							<Name>СтоимостьЕдиницы</Name>
 							<Synonym>
 								<key>ru</key>
-								<value>Цена за кг</value>
+								<value>Цена за кг (авто)</value>
 							</Synonym>
-							<Comment>Стоимость единицы ингредиента</Comment>
+							<Comment>Автоматически заполняемая цена ингредиента за кг</Comment>
 							<Type>
 								<TypeSet>
 									<Type>Number</Type>
@@ -545,9 +576,10 @@
 							<PasswordText>false</PasswordText>
 							<Tooltip>
 								<key>ru</key>
-								<value>Стоимость единицы ингредиента</value>
+								<value>Цена автоматически заполняется из справочника цен</value>
 							</Tooltip>
 							<FillValue xsi:type="Number">0</FillValue>
+							<ReadOnly>true</ReadOnly>
 							<FullTextSearch>Use</FullTextSearch>
 							<DataHistory>Use</DataHistory>
 						</Properties>

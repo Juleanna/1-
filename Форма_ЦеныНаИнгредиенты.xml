@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:mdclass="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Form uuid="m4l5k6j7-890f-23cd-456b-654321098765">
+		<Properties>
+			<Name>ФормаЭлемента</Name>
+			<Synonym>
+				<key>ru</key>
+				<value>Цены на ингредиенты</value>
+			</Synonym>
+			<Comment>Форма элемента справочника цен на ингредиенты</Comment>
+			<FormType>Ordinary</FormType>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<UsePurposes>
+				<v8:Value xsi:type="v8:ValueListType">
+					<v8:valueType/>
+					<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+				</v8:Value>
+			</UsePurposes>
+			<Explanation>
+				<key>ru</key>
+				<value>Форма для ведения цен на ингредиенты и сырье</value>
+			</Explanation>
+		</Properties>
+		<ChildObjects>
+			<ContextMenu uuid="l5k6j7i8-901a-34de-567c-543210987654">
+				<Properties>
+					<Name>ГлавноеКонтекстноеМеню</Name>
+				</Properties>
+			</ContextMenu>
+			<AutoCommandBar uuid="k6j7i8h9-012b-45ef-678d-432109876543">
+				<Properties>
+					<Name>КоманднаяПанель</Name>
+				</Properties>
+			</AutoCommandBar>
+			<ChildItems>
+				<LabelField uuid="j7i8h9g0-123c-56fa-789e-321098765432">
+					<Properties>
+						<Name>НадписьИнгредиент</Name>
+						<Title>
+							<key>ru</key>
+							<value>Ингредиент:</value>
+						</Title>
+						<ContextMenu>
+							<Name>НадписьИнгредиентКонтекстноеМеню</Name>
+							<id>-1</id>
+						</ContextMenu>
+						<ExtendedTooltip>
+							<Name>НадписьИнгредиентРасширеннаяПодсказка</Name>
+							<id>-1</id>
+						</ExtendedTooltip>
+					</Properties>
+				</LabelField>
+				<InputField uuid="i8h9g0f1-234d-67ab-890f-210987654321">
+					<Properties>
+						<Name>Ингредиент</Name>
+						<DataPath>Объект.Ингредиент</DataPath>
+						<ContextMenu>
+							<Name>ИнгредиентКонтекстноеМеню</Name>
+							<id>-1</id>
+						</ContextMenu>
+						<ExtendedTooltip>
+							<Name>ИнгредиентРасширеннаяПодсказка</Name>
+							<id>-1</id>
+						</ExtendedTooltip>
+					</Properties>
+				</InputField>
+				<LabelField uuid="h9g0f1e2-345e-78bc-901a-109876543210">
+					<Properties>
+						<Name>НадписьЕдиницаИзмерения</Name>
+						<Title>
+							<key>ru</key>
+							<value>Единица измерения:</value>
+						</Title>
+						<ContextMenu>
+							<Name>НадписьЕдиницаИзмеренияКонтекстноеМеню</Name>
+							<id>-1</id>
+						</ContextMenu>
+						<ExtendedTooltip>
+							<Name>НадписьЕдиницаИзмеренияРасширеннаяПодсказка</Name>
+							<id>-1</id>
+						</ExtendedTooltip>
+					</Properties>
+				</LabelField>
+				<InputField uuid="g0f1e2d3-456f-89cd-012b-098765432109">
+					<Properties>
+						<Name>ЕдиницаИзмерения</Name>
+						<DataPath>Объект.ЕдиницаИзмерения</DataPath>
+						<ContextMenu>
+							<Name>ЕдиницаИзмеренияКонтекстноеМеню</Name>
+							<id>-1</id>
+						</ContextMenu>
+						<ExtendedTooltip>
+							<Name>ЕдиницаИзмеренияРасширеннаяПодсказка</Name>
+							<id>-1</id>
+						</ExtendedTooltip>
+					</Properties>
+				</InputField>
+				<LabelField uuid="f1e2d3c4-567a-90de-123c-987654321098">
+					<Properties>
+						<Name>НадписьЦенаЗаЕдиницу</Name>
+						<Title>
+							<key>ru</key>
+							<value>Цена за единицу:</value>
+						</Title>
+						<ContextMenu>
+							<Name>НадписьЦенаЗаЕдиницуКонтекстноеМеню</Name>
+							<id>-1</id>
+						</ContextMenu>
+						<ExtendedTooltip>
+							<Name>НадписьЦенаЗаЕдиницуРасширеннаяПодсказка</Name>
+							<id>-1</id>
+						</ExtendedTooltip>
+					</Properties>
+				</LabelField>
+				<InputField uuid="e2d3c4b5-678b-01ef-234d-876543210987">
+					<Properties>
+						<Name>ЦенаЗаЕдиницу</Name>
+						<DataPath>Объект.ЦенаЗаЕдиницу</DataPath>
+						<ContextMenu>
+							<Name>ЦенаЗаЕдиницуКонтекстноеМеню</Name>
+							<id>-1</id>
+						</ContextMenu>
+						<ExtendedTooltip>
+							<Name>ЦенаЗаЕдиницуРасширеннаяПодсказка</Name>
+							<id>-1</id>
+						</ExtendedTooltip>
+					</Properties>
+				</InputField>
+				<LabelField uuid="d3c4b5a6-789c-12fa-345e-765432109876">
+					<Properties>
+						<Name>НадписьДатаУстановкиЦены</Name>
+						<Title>
+							<key>ru</key>
+							<value>Дата установки цены:</value>
+						</Title>
+						<ContextMenu>
+							<Name>НадписьДатаУстановкиЦеныКонтекстноеМеню</Name>
+							<id>-1</id>
+						</ContextMenu>
+						<ExtendedTooltip>
+							<Name>НадписьДатаУстановкиЦеныРасширеннаяПодсказка</Name>
+							<id>-1</id>
+						</ExtendedTooltip>
+					</Properties>
+				</LabelField>
+				<InputField uuid="c4b5a697-890d-23ab-456f-654321098765">
+					<Properties>
+						<Name>ДатаУстановкиЦены</Name>
+						<DataPath>Объект.ДатаУстановкиЦены</DataPath>
+						<ContextMenu>
+							<Name>ДатаУстановкиЦеныКонтекстноеМеню</Name>
+							<id>-1</id>
+						</ContextMenu>
+						<ExtendedTooltip>
+							<Name>ДатаУстановкиЦеныРасширеннаяПодсказка</Name>
+							<id>-1</id>
+						</ExtendedTooltip>
+					</Properties>
+				</InputField>
+				<Table uuid="b5a69788-901e-34bc-567a-543210987654">
+					<Properties>
+						<Name>ИсторияЦен</Name>
+						<DataPath>Объект.ИсторияЦен</DataPath>
+						<Title>
+							<key>ru</key>
+							<value>История изменения цен</value>
+						</Title>
+						<ToolTip>
+							<key>ru</key>
+							<value>История изменений цен на ингредиент</value>
+						</ToolTip>
+						<ContextMenu>
+							<Name>ИсторияЦенКонтекстноеМеню</Name>
+							<id>-1</id>
+						</ContextMenu>
+						<AutoCommandBar>
+							<Name>ИсторияЦенКоманднаяПанель</Name>
+							<id>-1</id>
+						</AutoCommandBar>
+						<ExtendedTooltip>
+							<Name>ИсторияЦенРасширеннаяПодсказка</Name>
+							<id>-1</id>
+						</ExtendedTooltip>
+						<SearchStringAddition>
+							<Name>ИсторияЦенСтрокаПоиска</Name>
+							<id>-1</id>
+						</SearchStringAddition>
+						<ViewStatusAddition>
+							<Name>ИсторияЦенСостояниеПросмотра</Name>
+							<id>-1</id>
+						</ViewStatusAddition>
+						<SearchControlAddition>
+							<Name>ИсторияЦенУправлениеПоиском</Name>
+							<id>-1</id>
+						</SearchControlAddition>
+					</Properties>
+					<ChildItems>
+						<InputField uuid="a69788c9-012f-45cd-678b-432109876543">
+							<Properties>
+								<Name>ИсторияЦенДатаИзменения</Name>
+								<DataPath>Объект.ИсторияЦен.ДатаИзменения</DataPath>
+								<ContextMenu>
+									<Name>ИсторияЦенДатаИзмененияКонтекстноеМеню</Name>
+									<id>-1</id>
+								</ContextMenu>
+								<ExtendedTooltip>
+									<Name>ИсторияЦенДатаИзмененияРасширеннаяПодсказка</Name>
+									<id>-1</id>
+								</ExtendedTooltip>
+							</Properties>
+						</InputField>
+						<InputField uuid="9788c9da-123a-56de-789c-321098765432">
+							<Properties>
+								<Name>ИсторияЦенСтараяЦена</Name>
+								<DataPath>Объект.ИсторияЦен.СтараяЦена</DataPath>
+								<ContextMenu>
+									<Name>ИсторияЦенСтараяЦенаКонтекстноеМеню</Name>
+									<id>-1</id>
+								</ContextMenu>
+								<ExtendedTooltip>
+									<Name>ИсторияЦенСтараяЦенаРасширеннаяПодсказка</Name>
+									<id>-1</id>
+								</ExtendedTooltip>
+							</Properties>
+						</InputField>
+						<InputField uuid="788c9dae-234b-67ef-890d-210987654321">
+							<Properties>
+								<Name>ИсторияЦенНоваяЦена</Name>
+								<DataPath>Объект.ИсторияЦен.НоваяЦена</DataPath>
+								<ContextMenu>
+									<Name>ИсторияЦенНоваяЦенаКонтекстноеМеню</Name>
+									<id>-1</id>
+								</ContextMenu>
+								<ExtendedTooltip>
+									<Name>ИсторияЦенНоваяЦенаРасширеннаяПодсказка</Name>
+									<id>-1</id>
+								</ExtendedTooltip>
+							</Properties>
+						</InputField>
+						<InputField uuid="88c9daeb-345c-78ab-901e-109876543210">
+							<Properties>
+								<Name>ИсторияЦенПричинаИзменения</Name>
+								<DataPath>Объект.ИсторияЦен.ПричинаИзменения</DataPath>
+								<ContextMenu>
+									<Name>ИсторияЦенПричинаИзмененияКонтекстноеМеню</Name>
+									<id>-1</id>
+								</ContextMenu>
+								<ExtendedTooltip>
+									<Name>ИсторияЦенПричинаИзмененияРасширеннаяПодсказка</Name>
+									<id>-1</id>
+								</ExtendedTooltip>
+							</Properties>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</ChildObjects>
+	</Form>
+</MetaDataObject>

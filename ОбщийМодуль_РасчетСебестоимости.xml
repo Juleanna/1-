@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:mdclass="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CommonModule uuid="m5l4k3j2-890a-34bc-567d-432109876543">
+		<Properties>
+			<Name>РасчетСебестоимости</Name>
+			<Synonym>
+				<key>ru</key>
+				<value>Расчет себестоимости</value>
+			</Synonym>
+			<Comment>Модуль для автоматического расчета себестоимости блюд</Comment>
+			<Server>true</Server>
+			<ExternalConnection>false</ExternalConnection>
+			<ClientOrdinaryApplication>false</ClientOrdinaryApplication>
+			<ClientManagedApplication>true</ClientManagedApplication>
+			<ServerCall>true</ServerCall>
+			<Privileged>false</Privileged>
+			<ReturnValuesReuse>DontUse</ReturnValuesReuse>
+		</Properties>
+	</CommonModule>
+</MetaDataObject>
