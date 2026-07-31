@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ГотовоеБлюдо" id="7">
+			<DataPath>Объект.ГотовоеБлюдо</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ГотовоеБлюдоКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ГотовоеБлюдоРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="КатегорияБлюда" id="10">
+			<DataPath>Объект.КатегорияБлюда</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КатегорияБлюдаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="КатегорияБлюдаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ВремяПриготовления" id="13">
+			<DataPath>Объект.ВремяПриготовления</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВремяПриготовленияКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВремяПриготовленияРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="КоличествоПорций" id="16">
+			<DataPath>Объект.КоличествоПорций</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КоличествоПорцийКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="КоличествоПорцийРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Техкарточка" id="19">
+			<DataPath>Объект.Техкарточка</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТехкарточкаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ТехкарточкаРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="СебестоимостьПорции" id="22">
+			<DataPath>Объект.СебестоимостьПорции</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СебестоимостьПорцииКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="СебестоимостьПорцииРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ТехнологияПриготовления" id="31">
+			<DataPath>Объект.ТехнологияПриготовления</DataPath>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="ТехнологияПриготовленияКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ТехнологияПриготовленияРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="29">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<Button name="СоздатьТехкарточку" id="25">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СоздатьТехкарточку</CommandName>
+					<ExtendedTooltip name="СоздатьТехкарточкуРасширеннаяПодсказка" id="26"/>
+				</Button>
+				<Button name="ОткрытьТехкарточку" id="27">
+					<Type>UsualButton</Type>
+					<CommandName>Catalog.Техкарточки.StandardCommand.OpenList</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Открыть техкарточку</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ОткрытьТехкарточкуРасширеннаяПодсказка" id="28"/>
+				</Button>
+				<Button name="ПересчитатьСебестоимость" id="34">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПересчитатьСебестоимость</CommandName>
+					<ExtendedTooltip name="ПересчитатьСебестоимостьРасширеннаяПодсказка" id="35"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.КулинарныеРецепты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьТехкарточку" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Создать техкарточку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Создать новую технологическую карту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьТехкарточку</Action>
+		</Command>
+		<Command name="ОткрытьТехкарточку" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Открыть техкарточку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Открыть выбранную технологическую карту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьТехкарточку</Action>
+		</Command>
+		<Command name="ПересчитатьСебестоимость" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Пересчитать себестоимость</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Пересчитать себестоимость порции по техкарточке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПересчитатьСебестоимость</Action>
+		</Command>
+	</Commands>
+</Form>

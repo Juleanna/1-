@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.12">
+	<ConfigVersions>
+		<Metadata name="AccumulationRegister.СвободныеОстатки" id="adab064b-132f-4489-a1ef-390769d428b5" configVersion="4a92df627fdd43f2c1fd7c690b54e75aeeadc76c"/>
+		<Metadata name="AccumulationRegister.ТоварыНаСкладах" id="f28d0a3c-12e5-474b-89bd-d09b822f5a27" configVersion="205a1fa027b43037627b9bb28a9101f2b9da5702"/>
+		<Metadata name="Catalog.КулинарныеРецепты" id="c187c153-310d-4413-8c0e-3b2a54fd1999" configVersion="179b7b614abee58b1bf6c09e746249afd2c320e1">
+			<Metadata name="Catalog.КулинарныеРецепты.Attribute.ГотовоеБлюдо" id="009c35d5-6d42-432b-8450-77a504b44651"/>
+			<Metadata name="Catalog.КулинарныеРецепты.Attribute.КатегорияБлюда" id="21f8000b-300d-4605-9acc-7fb45c8a5a28"/>
+			<Metadata name="Catalog.КулинарныеРецепты.Attribute.ВремяПриготовления" id="32e63437-f752-4e7a-8c93-0e935d7fc627"/>
+			<Metadata name="Catalog.КулинарныеРецепты.Attribute.КоличествоПорций" id="398b085b-90af-48ab-a330-a0106faee412"/>
+			<Metadata name="Catalog.КулинарныеРецепты.Attribute.ТехнологияПриготовления" id="6eaaf242-40c2-43c1-8ebd-ee738e48e43a"/>
+			<Metadata name="Catalog.КулинарныеРецепты.Attribute.СебестоимостьПорции" id="97c84e23-09b5-4f65-bf99-cf8e54a1a10c"/>
+			<Metadata name="Catalog.КулинарныеРецепты.Attribute.Техкарточка" id="9ecdeca2-c739-4b44-9842-071d65cc2e76"/>
+		</Metadata>
+		<Metadata name="Catalog.КулинарныеРецепты.Form.ФормаЭлемента" id="e092001d-d447-41a5-92c8-ea93b3f5abc7" configVersion="40b91d1585126e18bc19773d3e5857d79282e7f7"/>
+		<Metadata name="Catalog.КулинарныеРецепты.Form.ФормаЭлемента.Form" id="e092001d-d447-41a5-92c8-ea93b3f5abc7.0" configVersion="d76f227f10f3e2351587135cdf490eda54678254"/>
+		<Metadata name="Catalog.КулинарныеРецепты.ObjectModule" id="c187c153-310d-4413-8c0e-3b2a54fd1999.0" configVersion="70dd87d189656bffa649dfea11a3c7a6b0d0669d"/>
+		<Metadata name="Catalog.Номенклатура" id="f8648bd1-1219-4ce8-a88b-6d4aca2ccc67" configVersion="70bcddabe026e3de3cc28e16c3f93fc7efbe373c"/>
+		<Metadata name="Catalog.Партнеры" id="d4b55faa-6fa5-4373-8c1d-795e2e2cf092" configVersion="2d75a901d104fe9c0742612962f1142e44a4222c"/>
+		<Metadata name="Catalog.ПищеваяЦенностьИнгредиентов" id="f17f4814-0338-41f9-9101-9cbe9f1d401e" configVersion="10d62a7f54ce3c0543a5f9d56246176b86b62475">
+			<Metadata name="Catalog.ПищеваяЦенностьИнгредиентов.Attribute.Белки" id="08ecfa44-ec52-4ef4-a7a2-3923a2842892"/>
+			<Metadata name="Catalog.ПищеваяЦенностьИнгредиентов.Attribute.Жиры" id="af1fa994-ad3d-49bc-8e78-821335092614"/>
+			<Metadata name="Catalog.ПищеваяЦенностьИнгредиентов.Attribute.Калорийность" id="c0ed8743-a643-4bd5-b2cf-dc8e6405cfb8"/>
+			<Metadata name="Catalog.ПищеваяЦенностьИнгредиентов.Attribute.Ингредиент" id="c48fac6c-621c-4ea6-8111-0a32fc8a4993"/>
+			<Metadata name="Catalog.ПищеваяЦенностьИнгредиентов.Attribute.Углеводы" id="f9287abc-b5e7-4e04-96bd-bc7493b9e2f1"/>
+		</Metadata>
+		<Metadata name="Catalog.ПищеваяЦенностьИнгредиентов.Form.ФормаСписка" id="c8232aae-3e46-4730-8062-a8a1e8ecae13" configVersion="0b276812ac8e7eba72603b7c162ce64b3a7c5462"/>
+		<Metadata name="Catalog.ПищеваяЦенностьИнгредиентов.Form.ФормаСписка.Form" id="c8232aae-3e46-4730-8062-a8a1e8ecae13.0" configVersion="b6721d5ab8f98e823612b336291db97cf0406759"/>
+		<Metadata name="Catalog.ПищеваяЦенностьИнгредиентов.Form.ФормаЭлемента" id="e7663603-5137-4851-bed0-7a3628e1a3d9" configVersion="9cd0ef96a11da47168cbfa11ac4ff320975b9974"/>
+		<Metadata name="Catalog.ПищеваяЦенностьИнгредиентов.Form.ФормаЭлемента.Form" id="e7663603-5137-4851-bed0-7a3628e1a3d9.0" configVersion="b7b710259e0e50670ee299e1525596b36d51b56c"/>
+		<Metadata name="Catalog.Пользователи" id="715dce7c-dfe4-40b9-887b-41c35c5883ab" configVersion="21c55b65f35e4643b7e5feb98c84c991ec8954a7"/>
+		<Metadata name="Catalog.Склады" id="da415794-013e-49c0-a6c1-ef6d9866524c" configVersion="01f71f88589816b42bb1de4c253270a30e7c019d"/>
+		<Metadata name="Catalog.Техкарточки" id="11123d36-052f-491d-a207-95ff96f70dc7" configVersion="ad27b58f974e3ee84b5740299799dc9a2468b90b">
+			<Metadata name="Catalog.Техкарточки.TabularSection.СоставИнгредиентов.Attribute.Белки" id="009331de-95e6-4e2f-bbff-153d91a30311"/>
+			<Metadata name="Catalog.Техкарточки.TabularSection.СоставИнгредиентов.Attribute.СуммаСтоимости" id="0454ac91-0eee-4489-a12d-4fd2041c6423"/>
+			<Metadata name="Catalog.Техкарточки.TabularSection.СоставИнгредиентов.Attribute.ЦенаИнгредиента" id="07040a15-24e8-40b6-9637-0228e51c00ba"/>
+			<Metadata name="Catalog.Техкарточки.Attribute.СебестоимостьПорции" id="075c1aa6-c9c8-43ab-bc5d-72618b9d1136"/>
+			<Metadata name="Catalog.Техкарточки.TabularSection.СоставИнгредиентов" id="1da177ce-296f-4f61-90c0-2021aa66de71"/>
+			<Metadata name="Catalog.Техкарточки.TabularSection.СоставИнгредиентов.Attribute.Комментарий" id="21ac0c4f-b881-48ab-91d3-df8789b3b51d"/>
+			<Metadata name="Catalog.Техкарточки.TabularSection.СоставИнгредиентов.Attribute.Жиры" id="440f8d54-dad5-4f82-98b1-4c6cc8a90537"/>
+			<Metadata name="Catalog.Техкарточки.TabularSection.СоставИнгредиентов.Attribute.СтоимостьЕдиницы" id="464027d4-1e5e-4dbc-9efd-aae5d8c06cb3"/>
+			<Metadata name="Catalog.Техкарточки.Attribute.Углеводы" id="5056edbe-3b02-4c83-8754-67061b137f88"/>
+			<Metadata name="Catalog.Техкарточки.Attribute.ВыходПорции" id="5124d9a9-229e-4a70-92e2-a47c6cb67f51"/>
+			<Metadata name="Catalog.Техкарточки.Attribute.КалорийностьПорции" id="537ee546-8bfc-4730-ae33-171c303aea1b"/>
+			<Metadata name="Catalog.Техкарточки.Attribute.КатегорияБлюда" id="565274e2-5b97-45bb-bcf3-2dfc881de69a"/>
+			<Metadata name="Catalog.Техкарточки.Attribute.Жиры" id="5bfdf72f-e7f0-4ec7-8b00-c886d05e69bb"/>
+			<Metadata name="Catalog.Техкарточки.TabularSection.СоставИнгредиентов.Attribute.ПроцентОтходов" id="5e3fd787-5348-4ce8-b9f6-6dae6ce71461"/>
+			<Metadata name="Catalog.Техкарточки.TabularSection.СоставИнгредиентов.Attribute.Углеводы" id="76e1cda1-ff66-4a19-9f02-9c673ba6e3fe"/>
+			<Metadata name="Catalog.Техкарточки.Attribute.ГотовоеБлюдо" id="8a4cebae-0d2d-4b90-94e9-abb250c3e455"/>
+			<Metadata name="Catalog.Техкарточки.Attribute.Белки" id="8cf71262-a0f0-497d-8fb6-24e659d123ab"/>
+			<Metadata name="Catalog.Техкарточки.TabularSection.СоставИнгредиентов.Attribute.Калорийность" id="965339ac-3c5a-46c9-b690-2d4cfae7c661"/>
+			<Metadata name="Catalog.Техкарточки.Attribute.ВремяПриготовления" id="a25c0d55-b6ce-472b-aeb4-2752ca9de9ae"/>
+			<Metadata name="Catalog.Техкарточки.TabularSection.СоставИнгредиентов.Attribute.НормаНетто" id="b5bccb7a-42b1-4f51-9a5f-e8aae06de5bb"/>
+			<Metadata name="Catalog.Техкарточки.Attribute.ТребованияКСырью" id="b9b7910e-2c83-40a3-8657-84aa0aa8daea"/>
+			<Metadata name="Catalog.Техкарточки.TabularSection.СоставИнгредиентов.Attribute.НормаБрутто" id="baf96f36-df76-45ff-9236-cc4c52174694"/>
+			<Metadata name="Catalog.Техкарточки.Attribute.ТехнологияПриготовления" id="c2eb3358-b4e4-4971-b804-44f0f9043161"/>
+			<Metadata name="Catalog.Техкарточки.Attribute.ПоказателиГотовогоБлюда" id="d04ac960-0705-4df2-87b6-680d0f085ca9"/>
+			<Metadata name="Catalog.Техкарточки.Attribute.НомерТехкарточки" id="db4173e0-8ae3-4466-9cfb-041b4e4cf0f8"/>
+			<Metadata name="Catalog.Техкарточки.TabularSection.СоставИнгредиентов.Attribute.Ингредиент" id="f13febca-8cbe-4bf4-b021-54101605c7bf"/>
+		</Metadata>
+		<Metadata name="Catalog.Техкарточки.Form.ФормаЭлемента" id="d111ad86-dc3c-413f-b3fd-082206e8043d" configVersion="210cdabdc01d33cbc56607526ed8f49c0e3a3f9d"/>
+		<Metadata name="Catalog.Техкарточки.Form.ФормаЭлемента.Form" id="d111ad86-dc3c-413f-b3fd-082206e8043d.0" configVersion="faccad98e07bec1bf309346cc849ebfee4e17356"/>
+		<Metadata name="Catalog.Техкарточки.ManagerModule" id="11123d36-052f-491d-a207-95ff96f70dc7.3" configVersion="3ea1b0278253f65ab143badf15a3a522aeb4acd3"/>
+		<Metadata name="Catalog.УпаковкиЕдиницыИзмерения" id="5c3b93c6-2bb4-44b9-b6b0-e6760d24ddb2" configVersion="ebba25c30d96a630e71acd5a1a91bbd9c654cfba"/>
+		<Metadata name="Catalog.ЦеныНаИнгредиенты" id="8d519a6a-1163-4c50-bd00-1a6cc3da9a06" configVersion="125e88dc9a55d8a065932999fd230b2a7a1cb937">
+			<Metadata name="Catalog.ЦеныНаИнгредиенты.TabularSection.ИсторияЦен.Attribute.СтараяЦена" id="16ec8ee5-f068-489d-8785-83efb38b7958"/>
+			<Metadata name="Catalog.ЦеныНаИнгредиенты.Attribute.Активность" id="182d424a-f329-45f2-b5b8-462b1efd046c"/>
+			<Metadata name="Catalog.ЦеныНаИнгредиенты.Attribute.ДатаУстановкиЦены" id="1fa165b8-c845-4134-a285-b9d0a01ce14a"/>
+			<Metadata name="Catalog.ЦеныНаИнгредиенты.Attribute.Поставщик" id="2ae52017-046d-4e1c-a9e4-8cbb17c65adc"/>
+			<Metadata name="Catalog.ЦеныНаИнгредиенты.TabularSection.ИсторияЦен.Attribute.ПричинаИзменения" id="3eb1c0e4-57c7-44b1-a522-e240fed3620a"/>
+			<Metadata name="Catalog.ЦеныНаИнгредиенты.TabularSection.ИсторияЦен.Attribute.ДатаИзменения" id="48ab75fb-ce60-45da-8775-17ed970c4afa"/>
+			<Metadata name="Catalog.ЦеныНаИнгредиенты.TabularSection.ИсторияЦен" id="51cfe439-adef-47cd-9824-f4933b4c4eb2"/>
+			<Metadata name="Catalog.ЦеныНаИнгредиенты.Attribute.Комментарий" id="5e56a2a2-9700-482e-91e0-52c5839e4a11"/>
+			<Metadata name="Catalog.ЦеныНаИнгредиенты.Attribute.ЦенаЗаЕдиницу" id="805a401b-0977-44c2-8462-8c46595e568c"/>
+			<Metadata name="Catalog.ЦеныНаИнгредиенты.Attribute.ЕдиницаИзмерения" id="84540955-8a7c-4586-80ef-1626f6eb16b9"/>
+			<Metadata name="Catalog.ЦеныНаИнгредиенты.Attribute.Ингредиент" id="a1395b74-aa41-4948-aa01-63b56c36325f"/>
+			<Metadata name="Catalog.ЦеныНаИнгредиенты.TabularSection.ИсторияЦен.Attribute.НоваяЦена" id="b5a87b02-64e4-41f6-a2d8-9f5436a6c362"/>
+		</Metadata>
+		<Metadata name="Catalog.ЦеныНаИнгредиенты.Form.ФормаЭлемента" id="4220268d-60f5-4680-a68f-3f66dfd21abb" configVersion="21b2d355da56675a536c751bafd4b346479c7d44"/>
+		<Metadata name="Catalog.ЦеныНаИнгредиенты.Form.ФормаЭлемента.Form" id="4220268d-60f5-4680-a68f-3f66dfd21abb.0" configVersion="d846d2e15e367c3a217f6dafdbf42bd421a12f41"/>
+		<Metadata name="Catalog.ЦеныНаИнгредиенты.ManagerModule" id="8d519a6a-1163-4c50-bd00-1a6cc3da9a06.3" configVersion="a8642fdb8047cd7899a77cc6f4bbe795864cae89"/>
+		<Metadata name="CommonModule.РасчетСебестоимостиМодуль" id="42d0e642-0037-44bb-a4a4-56ee6b69bb87" configVersion="9a54f01ef55b60b439b8310e644eac6f1a13c371"/>
+		<Metadata name="CommonModule.РасчетСебестоимостиМодуль.Module" id="42d0e642-0037-44bb-a4a4-56ee6b69bb87.0" configVersion="be3431fe44381fb3f9f8f4358f901a98800abdfc"/>
+		<Metadata name="CommonPicture.Кухня" id="3a53fe06-09e0-4f59-bf8e-d775d60605af" configVersion="3ecd9bd75bd02d28b81df824bef941c5d34cef50"/>
+		<Metadata name="CommonPicture.Кухня.Picture" id="3a53fe06-09e0-4f59-bf8e-d775d60605af.0" configVersion="5ab0128a5455f9da9d5a8283bf6bda12c0132e9b"/>
+		<Metadata name="Configuration.Буфет" id="bd2346db-9ea8-487f-8f9d-357644213305" configVersion="b93740a3b6c5fad6d3a99c845a4b07f29ffc8d38"/>
+		<Metadata name="Constant.ЕдиницаИзмеренияВеса" id="7446320a-0552-4af6-bada-ea644dac47a8" configVersion="ffb0d391fec454dee381f33a0f4ef8126b3f9f58"/>
+		<Metadata name="DataProcessor.ОбновлениеЦенВТехКарточках" id="8b347813-b0c4-46b3-a575-c62b0e440660" configVersion="8d5503e8bd6a9c2b6437949aa6caa5c0865e0698">
+			<Metadata name="DataProcessor.ОбновлениеЦенВТехКарточках.Attribute.КоличествоОшибок" id="162c6d96-5bc7-4439-a9db-f713d8694ce1"/>
+			<Metadata name="DataProcessor.ОбновлениеЦенВТехКарточках.TabularSection.РезультатОбработки.Attribute.СтатусОбработки" id="3bdce7b6-681e-409a-8719-3ce870c6061d"/>
+			<Metadata name="DataProcessor.ОбновлениеЦенВТехКарточках.Attribute.КоличествоОбновленных" id="7cc5e7c6-2f2e-4808-afd6-b12598ad74b7"/>
+			<Metadata name="DataProcessor.ОбновлениеЦенВТехКарточках.TabularSection.РезультатОбработки.Attribute.ТекстОшибки" id="8551a610-7afa-406d-879b-90e261dcc05d"/>
+			<Metadata name="DataProcessor.ОбновлениеЦенВТехКарточках.TabularSection.РезультатОбработки" id="8e818210-e6b4-4d1e-b866-2763fd0d4853"/>
+			<Metadata name="DataProcessor.ОбновлениеЦенВТехКарточках.TabularSection.РезультатОбработки.Attribute.ТехКарточка" id="927aea8f-4802-4117-a3af-d1c06af43a89"/>
+			<Metadata name="DataProcessor.ОбновлениеЦенВТехКарточках.TabularSection.РезультатОбработки.Attribute.НоваяСебестоимость" id="a9af188e-c100-470f-917b-b7ef284a61ac"/>
+			<Metadata name="DataProcessor.ОбновлениеЦенВТехКарточках.Attribute.ВыбранныйИнгредиент" id="dd38bea7-46c5-48dd-abaf-0fb45110d238"/>
+			<Metadata name="DataProcessor.ОбновлениеЦенВТехКарточках.Attribute.РежимОбновления" id="e652511e-6b75-42ea-b2c4-0947210f5067"/>
+			<Metadata name="DataProcessor.ОбновлениеЦенВТехКарточках.TabularSection.РезультатОбработки.Attribute.СтараяСебестоимость" id="f66fe5e4-55a4-4738-b52f-b19a2fbc16bc"/>
+		</Metadata>
+		<Metadata name="DataProcessor.ОбновлениеЦенВТехКарточках.ObjectModule" id="8b347813-b0c4-46b3-a575-c62b0e440660.0" configVersion="2cdddf1910f12410bf4f695fd54c836d90bae6d2"/>
+		<Metadata name="Document.ПриготовлениеБлюда" id="561e031e-8264-4a6c-9cbd-a63e8949fc4e" configVersion="6ed0d82dce3cdc20d401788e0f33c0d7c40cbe88">
+			<Metadata name="Document.ПриготовлениеБлюда.TabularSection.ПриготавливаемыеБлюда" id="1bbf847d-a777-4c33-a5a0-00d4f8e231a1"/>
+			<Metadata name="Document.ПриготовлениеБлюда.Attribute.СкладСырья" id="209b889f-a907-4366-b53f-6b5c8fa7776a"/>
+			<Metadata name="Document.ПриготовлениеБлюда.TabularSection.ПриготавливаемыеБлюда.Attribute.КоличествоПорций" id="72c56306-f323-46b6-813e-0b7ca21e5f4a"/>
+			<Metadata name="Document.ПриготовлениеБлюда.Attribute.СкладГотовойПродукции" id="7885e7b4-8518-4c67-ae8e-c9d73a172e3b"/>
+			<Metadata name="Document.ПриготовлениеБлюда.TabularSection.ПриготавливаемыеБлюда.Attribute.ОбщаяПлановаяСебестоимость" id="c3e9607b-1d43-4f33-9428-ce8110ecbcac"/>
+			<Metadata name="Document.ПриготовлениеБлюда.TabularSection.ПриготавливаемыеБлюда.Attribute.ПлановаяСебестоимостьПорции" id="d50e3f62-c908-4dfb-8332-036b504ef6d9"/>
+			<Metadata name="Document.ПриготовлениеБлюда.TabularSection.ПриготавливаемыеБлюда.Attribute.Блюдо" id="dc363d78-6498-4b36-b431-f80c24439e1e"/>
+		</Metadata>
+		<Metadata name="Document.ПриготовлениеБлюда.Form.ФормаДокумента" id="2f7a38c9-4c3f-4665-986c-596af2322b69" configVersion="baac66025336b8724b92c5e7188d8e1a7100521c"/>
+		<Metadata name="Document.ПриготовлениеБлюда.Form.ФормаДокумента.Form" id="2f7a38c9-4c3f-4665-986c-596af2322b69.0" configVersion="9c4e3ade23c96d87733333fd4c11daa6441f3e71"/>
+		<Metadata name="Document.ПриготовлениеБлюда.ObjectModule" id="561e031e-8264-4a6c-9cbd-a63e8949fc4e.0" configVersion="76d375495ac2ae022bc96260df9184eb502dadee"/>
+		<Metadata name="Enum.КатегорииБлюд" id="7498c86a-8126-45a3-a457-c957b99a4c22" configVersion="2083e9d730b62345cd837c19550761b0af909c93">
+			<Metadata name="Enum.КатегорииБлюд.EnumValue.Супы" id="36cb417d-cfbd-481d-a177-bd50fc611758"/>
+			<Metadata name="Enum.КатегорииБлюд.EnumValue.Холодныезакуски" id="3b9be5e4-1f6f-42cc-a442-2f625027ffbe"/>
+			<Metadata name="Enum.КатегорииБлюд.EnumValue.Вторыеблюда" id="43b58885-2c75-4e5f-b37d-9249d1b3e113"/>
+			<Metadata name="Enum.КатегорииБлюд.EnumValue.Гарниры" id="484ee87e-65d1-44eb-acfc-06fa3bd27150"/>
+			<Metadata name="Enum.КатегорииБлюд.EnumValue.Выпечка" id="56088a42-164c-4776-9f58-0fb285ea9454"/>
+			<Metadata name="Enum.КатегорииБлюд.EnumValue.Десерты" id="60d0bb58-1f12-4ac3-aa4e-dc899ddc8717"/>
+			<Metadata name="Enum.КатегорииБлюд.EnumValue.Напитки" id="6aa56bf5-8e05-4aed-9ba6-8eb18159111c"/>
+			<Metadata name="Enum.КатегорииБлюд.EnumValue.Салаты" id="7c8459ad-e7c1-4cbe-894c-193d8aa85805"/>
+			<Metadata name="Enum.КатегорииБлюд.EnumValue.Горячиезакуски" id="e606d1c7-e895-4129-90ac-bcd37b39be71"/>
+		</Metadata>
+		<Metadata name="Enum.РежимыОбновленияЦен" id="a313510f-65b9-47d2-b355-ccd01e1ee109" configVersion="c4e686258013d4974c06d6497996213f14a01120">
+			<Metadata name="Enum.РежимыОбновленияЦен.EnumValue.ВсеТехкарточки" id="0456adf9-a226-49d2-9c46-3ef159a079e4"/>
+			<Metadata name="Enum.РежимыОбновленияЦен.EnumValue.ПоИнгредиенту" id="1ef50c24-8c79-4af1-8ac7-cdb99a40ee19"/>
+			<Metadata name="Enum.РежимыОбновленияЦен.EnumValue.ПоКатегории" id="87a23771-43b8-4e74-a10f-c14db464e707"/>
+		</Metadata>
+		<Metadata name="InformationRegister.ПриготовлениеПоРецептам" id="f7f5328d-ab93-4acd-9eca-07bb7712678e" configVersion="ac8c306d9ab0026ffd419c5106b6ef984e874a90">
+			<Metadata name="InformationRegister.ПриготовлениеПоРецептам.Resource.СкладГотовойПродукции" id="2b8d9d7e-00bb-4f29-9890-96498341ff92"/>
+			<Metadata name="InformationRegister.ПриготовлениеПоРецептам.Resource.СкладСырья" id="3499bcd2-23e6-4486-b2a2-3a35519b47d4"/>
+			<Metadata name="InformationRegister.ПриготовлениеПоРецептам.Dimension.Рецепт" id="79225ef9-8536-4edb-82b4-5bfaa87b17e7"/>
+			<Metadata name="InformationRegister.ПриготовлениеПоРецептам.Resource.КоличествоПорций" id="7ab4bc81-a59c-4f67-aaec-7cb4fd6ccb64"/>
+			<Metadata name="InformationRegister.ПриготовлениеПоРецептам.Dimension.ГотовоеБлюдо" id="87f6e893-3abf-4f8b-97bb-62e0c51974e2"/>
+			<Metadata name="InformationRegister.ПриготовлениеПоРецептам.Resource.СтоимостьИнгредиента" id="90f11f17-0fd0-4c63-9ca8-2de058010a8b"/>
+			<Metadata name="InformationRegister.ПриготовлениеПоРецептам.Resource.КоличествоИнгредиента" id="a9292d05-37af-43db-98bc-accdd6b21365"/>
+			<Metadata name="InformationRegister.ПриготовлениеПоРецептам.Dimension.Ингредиент" id="c0a7d9b8-3827-47b5-b44b-9e83ed763297"/>
+			<Metadata name="InformationRegister.ПриготовлениеПоРецептам.Dimension.ДатаВремя" id="f6a5a1ad-8aa7-4b73-9fa9-71779793dfc1"/>
+		</Metadata>
+		<Metadata name="InformationRegister.ПриготовлениеПоРецептам.RecordSetModule" id="f7f5328d-ab93-4acd-9eca-07bb7712678e.1" configVersion="c803ecdaadeaa5cecdc913e9a0f0e9372cca8fae"/>
+		<Metadata name="Language.Украинский" id="3c042a99-a2b0-4bcc-b862-961f5fd85504" configVersion="163a7fe83ab081b48df240423c962fc4bbda21c6"/>
+		<Metadata name="Role.Розш_ОсновнаяРоль" id="4f1eeb0e-e8ca-4323-a632-ac472e300701" configVersion="aaf745dbb7e83faa81954793823c79e721dd6696"/>
+		<Metadata name="Subsystem.Администрирование" id="a0af6ca7-8413-4ba4-9f36-87a00bf00778" configVersion="5cdf2b6c8ba881ea51084d1ef6973ba6e27ffd7c"/>
+		<Metadata name="Subsystem.Кухня" id="272e0398-fff5-4baa-a92d-d761ae85ed2d" configVersion="b85ed13ad11bc42fcb4269b253a2a5a3846c4517"/>
+		<Metadata name="Subsystem.Кухня.CommandInterface" id="272e0398-fff5-4baa-a92d-d761ae85ed2d.1" configVersion="7885856bf9aeee0e172b8633d195906216ea8d0c"/>
+		<Metadata name="Subsystem.Продажи" id="9e3a2323-0716-4454-9ee9-ed3ed4b3ded7" configVersion="f7e48ce62aa2b8d880e74d79953a8d2c5905b24a"/>
+		<Metadata name="Subsystem.ПродажиБазовая" id="fa641c8d-98b9-46db-9658-c7fde3e2604c" configVersion="9124ca38d3b72d4eb3f544643e5fdc048fb2494f"/>
+	</ConfigVersions>
+</ConfigDumpInfo>

@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Основнідані" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Основнідані</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Основнідані</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ОсновніданіРасширеннаяПодсказка" id="57"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Ингредиент" id="7">
+					<DataPath>Объект.Ингредиент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИнгредиентКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ИнгредиентРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="ЕдиницаИзмерения" id="10">
+					<DataPath>Объект.ЕдиницаИзмерения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ЕдиницаИзмеренияРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="ДатаУстановкиЦены" id="16">
+					<DataPath>Объект.ДатаУстановкиЦены</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаУстановкиЦеныКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ДатаУстановкиЦеныРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<InputField name="ЦенаЗаЕдиницу" id="13">
+					<DataPath>Объект.ЦенаЗаЕдиницу</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЦенаЗаЕдиницуКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ЦенаЗаЕдиницуРасширеннаяПодсказка" id="15"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ДодатковіДані" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Додаткові дані</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Додаткові дані</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ДодатковіДаніРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<InputField name="Поставщик" id="19">
+					<DataPath>Объект.Поставщик</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПоставщикКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ПоставщикРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<CheckBoxField name="Активность" id="22">
+					<DataPath>Объект.Активность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="АктивностьКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="АктивностьРасширеннаяПодсказка" id="24"/>
+				</CheckBoxField>
+				<InputField name="Комментарий" id="25">
+					<DataPath>Объект.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="27"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ИсторияЦен" id="28">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ИсторияЦен</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ИсторияЦенКонтекстноеМеню" id="29"/>
+			<AutoCommandBar name="ИсторияЦенКоманднаяПанель" id="30"/>
+			<ExtendedTooltip name="ИсторияЦенРасширеннаяПодсказка" id="31"/>
+			<SearchStringAddition name="ИсторияЦенСтрокаПоиска" id="32">
+				<AdditionSource>
+					<Item>ИсторияЦен</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИсторияЦенСтрокаПоискаКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="ИсторияЦенСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ИсторияЦенСостояниеПросмотра" id="35">
+				<AdditionSource>
+					<Item>ИсторияЦен</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИсторияЦенСостояниеПросмотраКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="ИсторияЦенСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ИсторияЦенУправлениеПоиском" id="38">
+				<AdditionSource>
+					<Item>ИсторияЦен</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ИсторияЦенУправлениеПоискомКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="ИсторияЦенУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ИсторияЦенНомерСтроки" id="41">
+					<DataPath>Объект.ИсторияЦен.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИсторияЦенНомерСтрокиКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ИсторияЦенНомерСтрокиРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<InputField name="ИсторияЦенДатаИзменения" id="44">
+					<DataPath>Объект.ИсторияЦен.ДатаИзменения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИсторияЦенДатаИзмененияКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ИсторияЦенДатаИзмененияРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="ИсторияЦенСтараяЦена" id="47">
+					<DataPath>Объект.ИсторияЦен.СтараяЦена</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИсторияЦенСтараяЦенаКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ИсторияЦенСтараяЦенаРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="ИсторияЦенНоваяЦена" id="50">
+					<DataPath>Объект.ИсторияЦен.НоваяЦена</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИсторияЦенНоваяЦенаКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ИсторияЦенНоваяЦенаРасширеннаяПодсказка" id="52"/>
+				</InputField>
+				<InputField name="ИсторияЦенПричинаИзменения" id="53">
+					<DataPath>Объект.ИсторияЦен.ПричинаИзменения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИсторияЦенПричинаИзмененияКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ИсторияЦенПричинаИзмененияРасширеннаяПодсказка" id="55"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЦеныНаИнгредиенты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>
