@@ -1,0 +1,33 @@
+# Выгрузки и резервные копии информационной базы
+*.dt
+*.cf
+*.cfe
+*.epf
+*.erf
+
+# Служебные файлы платформы 1С
+1Cv8Log/
+1Cv8.1CD
+*.1cd
+ExtCompT/
+Cache/
+*.log
+
+# Конфигуратор и EDT
+.settings/
+.project
+.classpath
+bin/
+build/
+
+# Временные файлы редакторов
+*.bak
+*.tmp
+*~
+.vscode/
+.idea/
+
+# Системные
+Thumbs.db
+desktop.ini
+.DS_Store

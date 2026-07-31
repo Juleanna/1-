@@ -1,0 +1,48 @@
+{
+  "$schema": "https://1c-syntax.github.io/bsl-language-server/configuration/schema.json",
+  "language": "ru",
+  "codeLens": {
+    "parameters": {
+      "cognitiveComplexity": {
+        "complexityThreshold": 15
+      }
+    }
+  },
+  "diagnostics": {
+    "computeTrigger": "onSave",
+    "parameters": {
+      "LineLength": {
+        "maxLineLength": 140
+      },
+      "MethodSize": {
+        "maxMethodSize": 120
+      },
+      "CognitiveComplexity": {
+        "complexityThreshold": 15
+      },
+      "CyclomaticComplexity": {
+        "complexityThreshold": 20
+      },
+      "MagicNumber": {
+        "authorizedNumbers": "-1,0,1,2,100,1000"
+      },
+      "CommentedCode": false,
+      "Typo": false,
+      "MissingSpace": false,
+      "UsingServiceTag": false,
+      "SelfAssign": true,
+      "EmptyCodeBlock": true,
+      "IfElseIfEndsWithElse": false,
+      "NestedTernaryOperator": true,
+      "UsingHardcodePath": true,
+      "UsingHardcodeNetworkAddress": true,
+      "DeprecatedMessage": true,
+      "QueryToMissingMetadata": true,
+      "MissingTemporaryFileDeletion": true,
+      "ExecuteExternalCodeInCommonModule": true,
+      "UsingCancelParameter": true,
+      "NonExportMethodsInApiRegion": true,
+      "ExportMethodInPrivateArea": true
+    }
+  }
+}
