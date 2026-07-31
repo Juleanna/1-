@@ -60,6 +60,17 @@ ALTERNATIVE_PAIRS = [
      'Справочник_Техкарточки_МодульФормы_БезСправочникаЦен.bsl'),
 ]
 
+# Соответствие модулей форм их выгрузкам: нужно, чтобы проверить,
+# что обработчики событий действительно привязаны к элементам формы
+FORM_SOURCES = {
+    'Справочник_Техкарточки_МодульФормы.bsl':
+        'bufet/Catalogs/Техкарточки/Forms/ФормаЭлемента/Ext/Form.xml',
+    'Справочник_КулинарныеРецепты.bsl':
+        'bufet/Catalogs/КулинарныеРецепты/Forms/ФормаЭлемента/Ext/Form.xml',
+    'Форма_ПриготовлениеБлюда.bsl':
+        'bufet/Documents/ПриготовлениеБлюда/Forms/ФормаДокумента/Ext/Form.xml',
+}
+
 
 def are_alternatives(first, second):
     for left, right in ALTERNATIVE_PAIRS:
@@ -141,6 +152,53 @@ BUILTIN = {
 IGNORE_CALLS = {'НастройкиВнешнегоВида', 'НастройкиИнтерактивности'}
 
 
+def form_bindings(form_xml):
+    """Имена процедур, привязанных к событиям и командам формы."""
+    import xml.etree.ElementTree as ET
+
+    try:
+        root = ET.parse(form_xml).getroot()
+    except Exception:
+        return None
+
+    def local(tag):
+        return tag.rsplit('}', 1)[-1]
+
+    bound = set()
+    for node in root.iter():
+        if local(node.tag) == 'Event':
+            for child in node.iter():
+                if child.text and child.text.strip():
+                    bound.add(child.text.strip())
+                    break
+        elif local(node.tag) == 'Command':
+            name = node.attrib.get('name')
+            if name:
+                bound.add(name)
+            for child in node:
+                if local(child.tag) == 'Action' and child.text:
+                    bound.add(child.text.strip())
+    return bound
+
+
+def check_form_handlers(module_name, text, form_xml, warnings):
+    """Обработчики событий, которые есть в модуле, но не привязаны в форме.
+
+    Такой код не вызывается: событие проходит мимо, а внешне всё выглядит
+    рабочим. Проверяется только если рядом есть выгрузка формы.
+    """
+    bound = form_bindings(form_xml)
+    if bound is None:
+        return
+
+    handlers = set(re.findall(r'^Процедура\s+(\w+)\(Элемент', text, re.M))
+    handlers |= set(re.findall(r'^Процедура\s+(\w+)\(Команда\)', text, re.M))
+
+    for orphan in sorted(handlers - bound):
+        warnings.append('%s: обработчик %s() не привязан ни к событию, '
+                        'ни к команде формы — не вызывается' % (module_name, orphan))
+
+
 def collect_exports(text):
     return set(re.findall(r'^(?:Функция|Процедура)\s+(\w+)\([^)]*\)\s*Экспорт', text, re.M))
 
@@ -207,6 +265,13 @@ def main():
         check_local_calls(name, text, collect_declared(text), problems)
         exports[name] = collect_exports(text)
         bodies[name] = function_bodies(text)
+
+        form_xml = FORM_SOURCES.get(name)
+        if form_xml:
+            full = os.path.join(os.path.dirname(path), os.path.basename(form_xml)) \
+                if os.path.isabs(form_xml) else os.path.join(os.path.dirname(path), form_xml)
+            if os.path.exists(full):
+                check_form_handlers(name, text, full, warnings)
 
     # Вызовы общих модулей
     common = {name[:-4] for name in exports if 'Модуль' in name and 'Форм' not in name}
