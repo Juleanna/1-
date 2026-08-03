@@ -4,6 +4,7 @@
 Что проверяет:
   * баланс парных конструкций (Процедура/КонецПроцедуры, Если/КонецЕсли, ...);
   * вызовы общего модуля, для которых нет экспортной функции;
+  * многострочные строковые литералы без «|» в начале строк продолжения;
   * запросы к базе внутри циклов (частая причина N+1);
   * дубли одноимённых функций в разных модулях с разным телом;
   * незакрытые области (#Область / #КонецОбласти).
@@ -109,6 +110,40 @@ def check_balance(name, text, problems):
     region_ends = len(re.findall(r'^\s*#КонецОбласти', text, re.M))
     if regions != region_ends:
         problems.append('%s: #Область %d != #КонецОбласти %d' % (name, regions, region_ends))
+
+
+def check_multiline_strings(name, text, problems):
+    """Каждая строка продолжения строкового литерала обязана начинаться с «|».
+
+    Пустая строка или текст без «|» внутри литерала — синтаксическая ошибка,
+    которую Конфигуратор показывает уже после вставки модуля, а сам модуль
+    при этом не компилируется целиком: перестают работать все команды формы.
+    """
+    lines = text.split('\n')
+    inside = False
+    started_at = 0
+
+    for number, line in enumerate(lines, 1):
+        code = re.sub(r'//.*$', '', line) if not inside else line
+
+        if inside:
+            if not code.lstrip().startswith('|'):
+                # Дальше разбирать бессмысленно: кавычки уже разъехались
+                # и каждая следующая строка дала бы ложное срабатывание
+                problems.append(
+                    '%s, строка %d: продолжение строкового литерала (открыт в строке %d) '
+                    'не начинается с «|»' % (name, number, started_at))
+                return
+            code = code.lstrip()[1:]
+
+        # Нечётное число кавычек означает, что литерал остался открытым
+        if code.count('"') % 2 == 1:
+            if not inside:
+                started_at = number
+            inside = not inside
+
+    if inside:
+        problems.append('%s: строковый литерал, открытый в строке %d, не закрыт' % (name, started_at))
 
 
 def check_loops(name, text, warnings):
@@ -264,6 +299,7 @@ def main():
     for path, text in modules.items():
         name = os.path.basename(path)
         check_balance(name, text, problems)
+        check_multiline_strings(name, text, problems)
         check_loops(name, text, warnings)
         check_local_calls(name, text, collect_declared(text), problems)
         exports[name] = collect_exports(text)
